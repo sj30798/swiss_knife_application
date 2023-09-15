@@ -1,0 +1,6 @@
+{
+  "appTitle": "swiss_knife_application",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
