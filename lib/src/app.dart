@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:swiss_knife_application/src/applications/json_formatter/json_formatter_application.dart';
+import 'package:swiss_knife_application/src/applications/json_formatter/json_formatter_application_view.dart';
+import 'package:swiss_knife_application/src/applications/pdf_compressor/pdf_compressor_application.dart';
+import 'package:swiss_knife_application/src/applications/pdf_compressor/pdf_compressor_application_view.dart';
+import 'package:swiss_knife_application/src/applications_list/all_application_list_view.dart';
 
 import 'sample_feature/sample_item_details_view.dart';
 import 'sample_feature/sample_item_list_view.dart';
@@ -69,11 +74,13 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case SampleItemDetailsView.routeName:
-                    return const SampleItemDetailsView();
-                  case SampleItemListView.routeName:
+                  case PdfCompressorApplication.routeName:
+                    return const PdfCompressorApplicationView();
+                  case JsonFormatterApplication.routeName:
+                    return const JsonFormatterApplicationView();
+                  case AllApplicationsListView.routeName:
                   default:
-                    return const SampleItemListView();
+                    return const AllApplicationsListView();
                 }
               },
             );
