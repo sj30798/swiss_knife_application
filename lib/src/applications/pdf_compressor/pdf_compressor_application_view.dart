@@ -11,7 +11,7 @@ class PdfCompressorApplicationView extends StatelessWidget {
       appBar: AppBar(
         title: const Text(PdfCompressorApplication.title),
       ),
-      body: PdfCompressorWidget(),
+      body: const PdfCompressorWidget(),
     );
   }
 }

@@ -10,6 +10,7 @@ environment:
   sdk: '>=3.1.2 <4.0.0'
 
 dependencies:
+  path: ^1.8.0
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -17,11 +18,15 @@ dependencies:
   validators: ^3.0.0
   logging: ^1.2.0
   file_selector: ^1.0.1
+  jni: ^0.7.0
+  pdfbox_plugin:
+    path: ./pdfbox_plugin
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  jnigen: ^0.7.0
 
 flutter:
   uses-material-design: true
