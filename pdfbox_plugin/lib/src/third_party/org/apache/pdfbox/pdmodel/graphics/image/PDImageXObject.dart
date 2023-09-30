@@ -40,6 +40,10 @@ import "package:jni/internal_helpers_for_jnigen.dart";
 import "package:jni/jni.dart" as jni;
 
 import "../../PDDocument.dart" as pddocument_;
+
+import "../../common/PDStream.dart" as pdstream_;
+
+import "../../common/PDMetadata.dart" as pdmetadata_;
 import "../../../../../../_init.dart";
 
 /// from: org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
@@ -142,7 +146,7 @@ class PDImageXObject extends jni.JObject {
   ///@param resources the current resources
   ///@throws java.io.IOException if there is an error creating the XObject.
   factory PDImageXObject.new2(
-    jni.JObject stream,
+    pdstream_.PDStream stream,
     jni.JObject resources,
   ) {
     return PDImageXObject.fromRef(
@@ -323,8 +327,9 @@ class PDImageXObject extends jni.JObject {
   ///
   /// Returns the metadata associated with this XObject, or null if there is none.
   ///@return the metadata associated with this object.
-  jni.JObject getMetadata() {
-    return const jni.JObjectType().fromRef(_getMetadata(reference).object);
+  pdmetadata_.PDMetadata getMetadata() {
+    return const pdmetadata_.$PDMetadataType()
+        .fromRef(_getMetadata(reference).object);
   }
 
   static final _setMetadata = jniLookup<
@@ -340,7 +345,7 @@ class PDImageXObject extends jni.JObject {
   /// Sets the metadata associated with this XObject, or null if there is none.
   ///@param meta the metadata associated with this object
   void setMetadata(
-    jni.JObject meta,
+    pdmetadata_.PDMetadata meta,
   ) {
     return _setMetadata(reference, meta.reference).check();
   }

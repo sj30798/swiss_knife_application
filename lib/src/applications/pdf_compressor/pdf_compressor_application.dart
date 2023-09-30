@@ -5,8 +5,8 @@ class PdfCompressorApplication extends BaseApplication
   const PdfCompressorApplication();
 
   static const int id = 1;
-  static const String title = "PDF compressor";
-  static const routeName = "/applications/pdf_compressor";
+  static const String title = "Image to PDF";
+  static const routeName = "/applications/image_to_pdf";
   static const  String applicationIcon = "";
 
   @override

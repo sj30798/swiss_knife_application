@@ -39,6 +39,11 @@ import "dart:ffi" as ffi;
 import "package:jni/internal_helpers_for_jnigen.dart";
 import "package:jni/jni.dart" as jni;
 
+import "common/PDRectangle.dart" as pdrectangle_;
+
+import "common/PDStream.dart" as pdstream_;
+
+import "common/PDMetadata.dart" as pdmetadata_;
 import "../../../../_init.dart";
 
 /// from: org.apache.pdfbox.pdmodel.PDPage
@@ -79,7 +84,7 @@ class PDPage extends jni.JObject {
   /// Creates a new instance of PDPage for embedding.
   ///@param mediaBox The MediaBox of the page.
   factory PDPage.new1(
-    jni.JObject mediaBox,
+    pdrectangle_.PDRectangle mediaBox,
   ) {
     return PDPage.fromRef(_new1(mediaBox.reference).object);
   }
@@ -127,8 +132,8 @@ class PDPage extends jni.JObject {
   ///
   /// Returns the content streams which make up this page.
   ///@return content stream iterator
-  jni.JIterator<jni.JObject> getContentStreams() {
-    return const jni.JIteratorType(jni.JObjectType())
+  jni.JIterator<pdstream_.PDStream> getContentStreams() {
+    return const jni.JIteratorType(pdstream_.$PDStreamType())
         .fromRef(_getContentStreams(reference).object);
   }
 
@@ -233,8 +238,9 @@ class PDPage extends jni.JObject {
 
   /// from: public org.apache.pdfbox.pdmodel.common.PDRectangle getBBox()
   /// The returned object must be released after use, by calling the [release] method.
-  jni.JObject getBBox() {
-    return const jni.JObjectType().fromRef(_getBBox(reference).object);
+  pdrectangle_.PDRectangle getBBox() {
+    return const pdrectangle_.$PDRectangleType()
+        .fromRef(_getBBox(reference).object);
   }
 
   static final _getMatrix = jniLookup<
@@ -261,8 +267,9 @@ class PDPage extends jni.JObject {
   /// A rectangle, expressed in default user space units, defining the boundaries of the physical medium on which the
   /// page is intended to be displayed or printed.
   ///@return the media box.
-  jni.JObject getMediaBox() {
-    return const jni.JObjectType().fromRef(_getMediaBox(reference).object);
+  pdrectangle_.PDRectangle getMediaBox() {
+    return const pdrectangle_.$PDRectangleType()
+        .fromRef(_getMediaBox(reference).object);
   }
 
   static final _setMediaBox = jniLookup<
@@ -278,7 +285,7 @@ class PDPage extends jni.JObject {
   /// This will set the mediaBox for this page.
   ///@param mediaBox The new mediaBox for this page.
   void setMediaBox(
-    jni.JObject mediaBox,
+    pdrectangle_.PDRectangle mediaBox,
   ) {
     return _setMediaBox(reference, mediaBox.reference).check();
   }
@@ -295,8 +302,9 @@ class PDPage extends jni.JObject {
   /// A rectangle, expressed in default user space units, defining the visible region of default user space. When the
   /// page is displayed or printed, its contents are to be clipped (cropped) to this rectangle.
   ///@return the crop box.
-  jni.JObject getCropBox() {
-    return const jni.JObjectType().fromRef(_getCropBox(reference).object);
+  pdrectangle_.PDRectangle getCropBox() {
+    return const pdrectangle_.$PDRectangleType()
+        .fromRef(_getCropBox(reference).object);
   }
 
   static final _setCropBox = jniLookup<
@@ -312,7 +320,7 @@ class PDPage extends jni.JObject {
   /// This will set the CropBox for this page.
   ///@param cropBox The new CropBox for this page.
   void setCropBox(
-    jni.JObject cropBox,
+    pdrectangle_.PDRectangle cropBox,
   ) {
     return _setCropBox(reference, cropBox.reference).check();
   }
@@ -330,8 +338,9 @@ class PDPage extends jni.JObject {
   /// of the page should be clipped when output in a production environment. The default is the
   /// CropBox.
   ///@return The BleedBox attribute.
-  jni.JObject getBleedBox() {
-    return const jni.JObjectType().fromRef(_getBleedBox(reference).object);
+  pdrectangle_.PDRectangle getBleedBox() {
+    return const pdrectangle_.$PDRectangleType()
+        .fromRef(_getBleedBox(reference).object);
   }
 
   static final _setBleedBox = jniLookup<
@@ -347,7 +356,7 @@ class PDPage extends jni.JObject {
   /// This will set the BleedBox for this page.
   ///@param bleedBox The new BleedBox for this page.
   void setBleedBox(
-    jni.JObject bleedBox,
+    pdrectangle_.PDRectangle bleedBox,
   ) {
     return _setBleedBox(reference, bleedBox.reference).check();
   }
@@ -364,8 +373,9 @@ class PDPage extends jni.JObject {
   /// A rectangle, expressed in default user space units, defining the intended dimensions of the
   /// finished page after trimming. The default is the CropBox.
   ///@return The TrimBox attribute.
-  jni.JObject getTrimBox() {
-    return const jni.JObjectType().fromRef(_getTrimBox(reference).object);
+  pdrectangle_.PDRectangle getTrimBox() {
+    return const pdrectangle_.$PDRectangleType()
+        .fromRef(_getTrimBox(reference).object);
   }
 
   static final _setTrimBox = jniLookup<
@@ -381,7 +391,7 @@ class PDPage extends jni.JObject {
   /// This will set the TrimBox for this page.
   ///@param trimBox The new TrimBox for this page.
   void setTrimBox(
-    jni.JObject trimBox,
+    pdrectangle_.PDRectangle trimBox,
   ) {
     return _setTrimBox(reference, trimBox.reference).check();
   }
@@ -399,8 +409,9 @@ class PDPage extends jni.JObject {
   /// meaningful content (including potential white space) as intended by the page's creator The
   /// default is the CropBox.
   ///@return The ArtBox attribute.
-  jni.JObject getArtBox() {
-    return const jni.JObjectType().fromRef(_getArtBox(reference).object);
+  pdrectangle_.PDRectangle getArtBox() {
+    return const pdrectangle_.$PDRectangleType()
+        .fromRef(_getArtBox(reference).object);
   }
 
   static final _setArtBox = jniLookup<
@@ -416,7 +427,7 @@ class PDPage extends jni.JObject {
   /// This will set the ArtBox for this page.
   ///@param artBox The new ArtBox for this page.
   void setArtBox(
-    jni.JObject artBox,
+    pdrectangle_.PDRectangle artBox,
   ) {
     return _setArtBox(reference, artBox.reference).check();
   }
@@ -467,7 +478,7 @@ class PDPage extends jni.JObject {
   /// This will set the contents of this page.
   ///@param contents The new contents of the page.
   void setContents(
-    jni.JObject contents,
+    pdstream_.PDStream contents,
   ) {
     return _setContents(reference, contents.reference).check();
   }
@@ -485,7 +496,7 @@ class PDPage extends jni.JObject {
   /// This will set the contents of this page.
   ///@param contents Array of new contents of the page.
   void setContents1(
-    jni.JList<jni.JObject> contents,
+    jni.JList<pdstream_.PDStream> contents,
   ) {
     return _setContents1(reference, contents.reference).check();
   }
@@ -538,8 +549,9 @@ class PDPage extends jni.JObject {
   /// Get the metadata that is part of the document catalog. This will return null if there is
   /// no meta data for this object.
   ///@return The metadata for this object.
-  jni.JObject getMetadata() {
-    return const jni.JObjectType().fromRef(_getMetadata(reference).object);
+  pdmetadata_.PDMetadata getMetadata() {
+    return const pdmetadata_.$PDMetadataType()
+        .fromRef(_getMetadata(reference).object);
   }
 
   static final _setMetadata = jniLookup<
@@ -555,7 +567,7 @@ class PDPage extends jni.JObject {
   /// Set the metadata for this object. This can be null.
   ///@param meta The meta data for this object.
   void setMetadata(
-    jni.JObject meta,
+    pdmetadata_.PDMetadata meta,
   ) {
     return _setMetadata(reference, meta.reference).check();
   }

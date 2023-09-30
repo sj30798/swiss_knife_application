@@ -7,8 +7,6 @@ import 'package:swiss_knife_application/src/applications/pdf_compressor/pdf_comp
 import 'package:swiss_knife_application/src/applications/pdf_compressor/pdf_compressor_application_view.dart';
 import 'package:swiss_knife_application/src/applications_list/all_application_list_view.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/sample_item_list_view.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 

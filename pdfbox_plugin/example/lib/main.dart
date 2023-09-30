@@ -181,7 +181,7 @@ class PDFFileInfo {
         contentStream.drawImage(imageObj, 20, 20);
         contentStream.close();
       doc.save(JString.fromString("/home/shubham/Downloads/output.pdf"));
-      sleep(Duration(seconds: 10));
+      sleep(const Duration(seconds: 10));
       doc.close();
     debugPrint("Initializeddocument");
     final pdf = PDDocument.load(inputFile);

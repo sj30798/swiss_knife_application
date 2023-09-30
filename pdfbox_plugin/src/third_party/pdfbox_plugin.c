@@ -4933,3 +4933,4422 @@ JniResult PDImageXObject__setOptionalContent(jobject self_,jobject oc) {
     return (JniResult){.value = {.j = 0}, .exception = check_exception()};
 }
 
+// org.apache.pdfbox.pdmodel.common.COSArrayList
+jclass _c_COSArrayList = NULL;
+
+jmethodID _m_COSArrayList__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__new0() {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__new0, "<init>", "()V");
+    if (_m_COSArrayList__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_COSArrayList, _m_COSArrayList__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__new1(jobject actualList,jobject cosArray) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__new1, "<init>", "(Ljava/util/List;Lorg/apache/pdfbox/cos/COSArray;)V");
+    if (_m_COSArrayList__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_COSArrayList, _m_COSArrayList__new1, actualList, cosArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__new2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__new2(jobject dictionary,jobject dictionaryKey) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__new2, "<init>", "(Lorg/apache/pdfbox/cos/COSDictionary;Lorg/apache/pdfbox/cos/COSName;)V");
+    if (_m_COSArrayList__new2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_COSArrayList, _m_COSArrayList__new2, dictionary, dictionaryKey);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__new3 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__new3(jobject actualObject,jobject item,jobject dictionary,jobject dictionaryKey) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__new3, "<init>", "(Ljava/lang/Object;Lorg/apache/pdfbox/cos/COSBase;Lorg/apache/pdfbox/cos/COSDictionary;Lorg/apache/pdfbox/cos/COSName;)V");
+    if (_m_COSArrayList__new3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_COSArrayList, _m_COSArrayList__new3, actualObject, item, dictionary, dictionaryKey);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__size = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__size(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__size, "size", "()I");
+    if (_m_COSArrayList__size == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_COSArrayList__size);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__isEmpty = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__isEmpty(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__isEmpty, "isEmpty", "()Z");
+    if (_m_COSArrayList__isEmpty == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__isEmpty);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__contains = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__contains(jobject self_,jobject o) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__contains, "contains", "(Ljava/lang/Object;)Z");
+    if (_m_COSArrayList__contains == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__contains, o);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__iterator = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__iterator(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__iterator, "iterator", "()Ljava/util/Iterator;");
+    if (_m_COSArrayList__iterator == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__iterator);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__toArray = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__toArray(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__toArray, "toArray", "()[Ljava/lang/Object;");
+    if (_m_COSArrayList__toArray == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__toArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__toArray1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__toArray1(jobject self_,jobject a) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__toArray1, "toArray", "([Ljava/lang/Object;)[Ljava/lang/Object;");
+    if (_m_COSArrayList__toArray1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__toArray1, a);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__add = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__add(jobject self_,jobject o) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__add, "add", "(Ljava/lang/Object;)Z");
+    if (_m_COSArrayList__add == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__add, o);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__remove = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__remove(jobject self_,jobject o) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__remove, "remove", "(Ljava/lang/Object;)Z");
+    if (_m_COSArrayList__remove == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__remove, o);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__containsAll = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__containsAll(jobject self_,jobject c) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__containsAll, "containsAll", "(Ljava/util/Collection;)Z");
+    if (_m_COSArrayList__containsAll == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__containsAll, c);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__addAll = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__addAll(jobject self_,jobject c) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__addAll, "addAll", "(Ljava/util/Collection;)Z");
+    if (_m_COSArrayList__addAll == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__addAll, c);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__addAll1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__addAll1(jobject self_,int32_t index,jobject c) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__addAll1, "addAll", "(ILjava/util/Collection;)Z");
+    if (_m_COSArrayList__addAll1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__addAll1, index, c);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__convertIntegerCOSArrayToList = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__convertIntegerCOSArrayToList(jobject intArray) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSArrayList,
+      &_m_COSArrayList__convertIntegerCOSArrayToList, "convertIntegerCOSArrayToList", "(Lorg/apache/pdfbox/cos/COSArray;)Ljava/util/List;");
+    if (_m_COSArrayList__convertIntegerCOSArrayToList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSArrayList, _m_COSArrayList__convertIntegerCOSArrayToList, intArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__convertFloatCOSArrayToList = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__convertFloatCOSArrayToList(jobject floatArray) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSArrayList,
+      &_m_COSArrayList__convertFloatCOSArrayToList, "convertFloatCOSArrayToList", "(Lorg/apache/pdfbox/cos/COSArray;)Ljava/util/List;");
+    if (_m_COSArrayList__convertFloatCOSArrayToList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSArrayList, _m_COSArrayList__convertFloatCOSArrayToList, floatArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__convertCOSNameCOSArrayToList = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__convertCOSNameCOSArrayToList(jobject nameArray) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSArrayList,
+      &_m_COSArrayList__convertCOSNameCOSArrayToList, "convertCOSNameCOSArrayToList", "(Lorg/apache/pdfbox/cos/COSArray;)Ljava/util/List;");
+    if (_m_COSArrayList__convertCOSNameCOSArrayToList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSArrayList, _m_COSArrayList__convertCOSNameCOSArrayToList, nameArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__convertCOSStringCOSArrayToList = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__convertCOSStringCOSArrayToList(jobject stringArray) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSArrayList,
+      &_m_COSArrayList__convertCOSStringCOSArrayToList, "convertCOSStringCOSArrayToList", "(Lorg/apache/pdfbox/cos/COSArray;)Ljava/util/List;");
+    if (_m_COSArrayList__convertCOSStringCOSArrayToList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSArrayList, _m_COSArrayList__convertCOSStringCOSArrayToList, stringArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__convertStringListToCOSNameCOSArray = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__convertStringListToCOSNameCOSArray(jobject strings) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSArrayList,
+      &_m_COSArrayList__convertStringListToCOSNameCOSArray, "convertStringListToCOSNameCOSArray", "(Ljava/util/List;)Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_COSArrayList__convertStringListToCOSNameCOSArray == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSArrayList, _m_COSArrayList__convertStringListToCOSNameCOSArray, strings);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__convertStringListToCOSStringCOSArray = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__convertStringListToCOSStringCOSArray(jobject strings) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSArrayList,
+      &_m_COSArrayList__convertStringListToCOSStringCOSArray, "convertStringListToCOSStringCOSArray", "(Ljava/util/List;)Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_COSArrayList__convertStringListToCOSStringCOSArray == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSArrayList, _m_COSArrayList__convertStringListToCOSStringCOSArray, strings);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__converterToCOSArray = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__converterToCOSArray(jobject cosObjectableList) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSArrayList,
+      &_m_COSArrayList__converterToCOSArray, "converterToCOSArray", "(Ljava/util/List;)Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_COSArrayList__converterToCOSArray == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSArrayList, _m_COSArrayList__converterToCOSArray, cosObjectableList);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__removeAll = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__removeAll(jobject self_,jobject c) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__removeAll, "removeAll", "(Ljava/util/Collection;)Z");
+    if (_m_COSArrayList__removeAll == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__removeAll, c);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__retainAll = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__retainAll(jobject self_,jobject c) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__retainAll, "retainAll", "(Ljava/util/Collection;)Z");
+    if (_m_COSArrayList__retainAll == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__retainAll, c);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__clear = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__clear(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__clear, "clear", "()V");
+    if (_m_COSArrayList__clear == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_COSArrayList__clear);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__equals1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__equals1(jobject self_,jobject o) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__equals1, "equals", "(Ljava/lang/Object;)Z");
+    if (_m_COSArrayList__equals1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSArrayList__equals1, o);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__hashCode1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__hashCode1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__hashCode1, "hashCode", "()I");
+    if (_m_COSArrayList__hashCode1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_COSArrayList__hashCode1);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__get0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__get0(jobject self_,int32_t index) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__get0, "get", "(I)Ljava/lang/Object;");
+    if (_m_COSArrayList__get0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__get0, index);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__set0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__set0(jobject self_,int32_t index,jobject element) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__set0, "set", "(ILjava/lang/Object;)Ljava/lang/Object;");
+    if (_m_COSArrayList__set0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__set0, index, element);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__add1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__add1(jobject self_,int32_t index,jobject element) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__add1, "add", "(ILjava/lang/Object;)V");
+    if (_m_COSArrayList__add1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_COSArrayList__add1, index, element);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__remove1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__remove1(jobject self_,int32_t index) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__remove1, "remove", "(I)Ljava/lang/Object;");
+    if (_m_COSArrayList__remove1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__remove1, index);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__indexOf = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__indexOf(jobject self_,jobject o) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__indexOf, "indexOf", "(Ljava/lang/Object;)I");
+    if (_m_COSArrayList__indexOf == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_COSArrayList__indexOf, o);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__lastIndexOf = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__lastIndexOf(jobject self_,jobject o) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__lastIndexOf, "lastIndexOf", "(Ljava/lang/Object;)I");
+    if (_m_COSArrayList__lastIndexOf == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_COSArrayList__lastIndexOf, o);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSArrayList__listIterator = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__listIterator(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__listIterator, "listIterator", "()Ljava/util/ListIterator;");
+    if (_m_COSArrayList__listIterator == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__listIterator);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__listIterator1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__listIterator1(jobject self_,int32_t index) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__listIterator1, "listIterator", "(I)Ljava/util/ListIterator;");
+    if (_m_COSArrayList__listIterator1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__listIterator1, index);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__subList = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__subList(jobject self_,int32_t fromIndex,int32_t toIndex) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__subList, "subList", "(II)Ljava/util/List;");
+    if (_m_COSArrayList__subList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__subList, fromIndex, toIndex);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__toString1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__toString1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__toString1, "toString", "()Ljava/lang/String;");
+    if (_m_COSArrayList__toString1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__toString1);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__getCOSArray = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__getCOSArray(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__getCOSArray, "getCOSArray", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_COSArrayList__getCOSArray == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__getCOSArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSArrayList__toList = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSArrayList__toList(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSArrayList, "org/apache/pdfbox/pdmodel/common/COSArrayList");
+    if (_c_COSArrayList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSArrayList,
+      &_m_COSArrayList__toList, "toList", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_COSArrayList__toList == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSArrayList__toList);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.COSDictionaryMap
+jclass _c_COSDictionaryMap = NULL;
+
+jmethodID _m_COSDictionaryMap__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__new0(jobject actualsMap,jobject dicMap) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__new0, "<init>", "(Ljava/util/Map;Lorg/apache/pdfbox/cos/COSDictionary;)V");
+    if (_m_COSDictionaryMap__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_COSDictionaryMap, _m_COSDictionaryMap__new0, actualsMap, dicMap);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__size = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__size(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__size, "size", "()I");
+    if (_m_COSDictionaryMap__size == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_COSDictionaryMap__size);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSDictionaryMap__isEmpty = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__isEmpty(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__isEmpty, "isEmpty", "()Z");
+    if (_m_COSDictionaryMap__isEmpty == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSDictionaryMap__isEmpty);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSDictionaryMap__containsKey = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__containsKey(jobject self_,jobject key) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__containsKey, "containsKey", "(Ljava/lang/Object;)Z");
+    if (_m_COSDictionaryMap__containsKey == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSDictionaryMap__containsKey, key);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSDictionaryMap__containsValue = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__containsValue(jobject self_,jobject value) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__containsValue, "containsValue", "(Ljava/lang/Object;)Z");
+    if (_m_COSDictionaryMap__containsValue == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSDictionaryMap__containsValue, value);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSDictionaryMap__get0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__get0(jobject self_,jobject key) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__get0, "get", "(Ljava/lang/Object;)Ljava/lang/Object;");
+    if (_m_COSDictionaryMap__get0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSDictionaryMap__get0, key);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__put = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__put(jobject self_,jobject key,jobject value) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__put, "put", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
+    if (_m_COSDictionaryMap__put == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSDictionaryMap__put, key, value);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__remove = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__remove(jobject self_,jobject key) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__remove, "remove", "(Ljava/lang/Object;)Ljava/lang/Object;");
+    if (_m_COSDictionaryMap__remove == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSDictionaryMap__remove, key);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__putAll = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__putAll(jobject self_,jobject t) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__putAll, "putAll", "(Ljava/util/Map;)V");
+    if (_m_COSDictionaryMap__putAll == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_COSDictionaryMap__putAll, t);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_COSDictionaryMap__clear = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__clear(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__clear, "clear", "()V");
+    if (_m_COSDictionaryMap__clear == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_COSDictionaryMap__clear);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_COSDictionaryMap__keySet = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__keySet(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__keySet, "keySet", "()Ljava/util/Set;");
+    if (_m_COSDictionaryMap__keySet == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSDictionaryMap__keySet);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__values = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__values(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__values, "values", "()Ljava/util/Collection;");
+    if (_m_COSDictionaryMap__values == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSDictionaryMap__values);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__entrySet = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__entrySet(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__entrySet, "entrySet", "()Ljava/util/Set;");
+    if (_m_COSDictionaryMap__entrySet == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSDictionaryMap__entrySet);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__equals1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__equals1(jobject self_,jobject o) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__equals1, "equals", "(Ljava/lang/Object;)Z");
+    if (_m_COSDictionaryMap__equals1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_COSDictionaryMap__equals1, o);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSDictionaryMap__toString1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__toString1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__toString1, "toString", "()Ljava/lang/String;");
+    if (_m_COSDictionaryMap__toString1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSDictionaryMap__toString1);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__hashCode1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__hashCode1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__hashCode1, "hashCode", "()I");
+    if (_m_COSDictionaryMap__hashCode1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_COSDictionaryMap__hashCode1);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_COSDictionaryMap__convert = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__convert(jobject someMap) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__convert, "convert", "(Ljava/util/Map;)Lorg/apache/pdfbox/cos/COSDictionary;");
+    if (_m_COSDictionaryMap__convert == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSDictionaryMap, _m_COSDictionaryMap__convert, someMap);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_COSDictionaryMap__convertBasicTypesToMap = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSDictionaryMap__convertBasicTypesToMap(jobject map) {
+    load_env();
+        load_class_global_ref(&_c_COSDictionaryMap, "org/apache/pdfbox/pdmodel/common/COSDictionaryMap");
+    if (_c_COSDictionaryMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_COSDictionaryMap,
+      &_m_COSDictionaryMap__convertBasicTypesToMap, "convertBasicTypesToMap", "(Lorg/apache/pdfbox/cos/COSDictionary;)Lorg/apache/pdfbox/pdmodel/common/COSDictionaryMap;");
+    if (_m_COSDictionaryMap__convertBasicTypesToMap == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_COSDictionaryMap, _m_COSDictionaryMap__convertBasicTypesToMap, map);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.COSObjectable
+jclass _c_COSObjectable = NULL;
+
+jmethodID _m_COSObjectable__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult COSObjectable__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_COSObjectable, "org/apache/pdfbox/pdmodel/common/COSObjectable");
+    if (_c_COSObjectable == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_COSObjectable,
+      &_m_COSObjectable__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSBase;");
+    if (_m_COSObjectable__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_COSObjectable__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.PDDestinationOrAction
+jclass _c_PDDestinationOrAction = NULL;
+
+// org.apache.pdfbox.pdmodel.common.PDDictionaryWrapper
+jclass _c_PDDictionaryWrapper = NULL;
+
+jmethodID _m_PDDictionaryWrapper__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDDictionaryWrapper__new0() {
+    load_env();
+        load_class_global_ref(&_c_PDDictionaryWrapper, "org/apache/pdfbox/pdmodel/common/PDDictionaryWrapper");
+    if (_c_PDDictionaryWrapper == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDDictionaryWrapper,
+      &_m_PDDictionaryWrapper__new0, "<init>", "()V");
+    if (_m_PDDictionaryWrapper__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDDictionaryWrapper, _m_PDDictionaryWrapper__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDDictionaryWrapper__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDDictionaryWrapper__new1(jobject dictionary) {
+    load_env();
+        load_class_global_ref(&_c_PDDictionaryWrapper, "org/apache/pdfbox/pdmodel/common/PDDictionaryWrapper");
+    if (_c_PDDictionaryWrapper == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDDictionaryWrapper,
+      &_m_PDDictionaryWrapper__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSDictionary;)V");
+    if (_m_PDDictionaryWrapper__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDDictionaryWrapper, _m_PDDictionaryWrapper__new1, dictionary);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDDictionaryWrapper__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDDictionaryWrapper__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDDictionaryWrapper, "org/apache/pdfbox/pdmodel/common/PDDictionaryWrapper");
+    if (_c_PDDictionaryWrapper == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDDictionaryWrapper,
+      &_m_PDDictionaryWrapper__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSDictionary;");
+    if (_m_PDDictionaryWrapper__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDDictionaryWrapper__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDDictionaryWrapper__equals1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDDictionaryWrapper__equals1(jobject self_,jobject obj) {
+    load_env();
+        load_class_global_ref(&_c_PDDictionaryWrapper, "org/apache/pdfbox/pdmodel/common/PDDictionaryWrapper");
+    if (_c_PDDictionaryWrapper == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDDictionaryWrapper,
+      &_m_PDDictionaryWrapper__equals1, "equals", "(Ljava/lang/Object;)Z");
+    if (_m_PDDictionaryWrapper__equals1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_PDDictionaryWrapper__equals1, obj);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDDictionaryWrapper__hashCode1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDDictionaryWrapper__hashCode1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDDictionaryWrapper, "org/apache/pdfbox/pdmodel/common/PDDictionaryWrapper");
+    if (_c_PDDictionaryWrapper == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDDictionaryWrapper,
+      &_m_PDDictionaryWrapper__hashCode1, "hashCode", "()I");
+    if (_m_PDDictionaryWrapper__hashCode1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDDictionaryWrapper__hashCode1);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.PDMetadata
+jclass _c_PDMetadata = NULL;
+
+jmethodID _m_PDMetadata__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDMetadata__new0(jobject document) {
+    load_env();
+        load_class_global_ref(&_c_PDMetadata, "org/apache/pdfbox/pdmodel/common/PDMetadata");
+    if (_c_PDMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDMetadata,
+      &_m_PDMetadata__new0, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;)V");
+    if (_m_PDMetadata__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDMetadata, _m_PDMetadata__new0, document);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDMetadata__new3 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDMetadata__new3(jobject doc,jobject str) {
+    load_env();
+        load_class_global_ref(&_c_PDMetadata, "org/apache/pdfbox/pdmodel/common/PDMetadata");
+    if (_c_PDMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDMetadata,
+      &_m_PDMetadata__new3, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;Ljava/io/InputStream;)V");
+    if (_m_PDMetadata__new3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDMetadata, _m_PDMetadata__new3, doc, str);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDMetadata__new2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDMetadata__new2(jobject str) {
+    load_env();
+        load_class_global_ref(&_c_PDMetadata, "org/apache/pdfbox/pdmodel/common/PDMetadata");
+    if (_c_PDMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDMetadata,
+      &_m_PDMetadata__new2, "<init>", "(Lorg/apache/pdfbox/cos/COSStream;)V");
+    if (_m_PDMetadata__new2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDMetadata, _m_PDMetadata__new2, str);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDMetadata__exportXMPMetadata = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDMetadata__exportXMPMetadata(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDMetadata, "org/apache/pdfbox/pdmodel/common/PDMetadata");
+    if (_c_PDMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDMetadata,
+      &_m_PDMetadata__exportXMPMetadata, "exportXMPMetadata", "()Ljava/io/InputStream;");
+    if (_m_PDMetadata__exportXMPMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDMetadata__exportXMPMetadata);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDMetadata__importXMPMetadata = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDMetadata__importXMPMetadata(jobject self_,jobject xmp) {
+    load_env();
+        load_class_global_ref(&_c_PDMetadata, "org/apache/pdfbox/pdmodel/common/PDMetadata");
+    if (_c_PDMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDMetadata,
+      &_m_PDMetadata__importXMPMetadata, "importXMPMetadata", "([B)V");
+    if (_m_PDMetadata__importXMPMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDMetadata__importXMPMetadata, xmp);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.PDNameTreeNode
+jclass _c_PDNameTreeNode = NULL;
+
+jmethodID _m_PDNameTreeNode__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__new0() {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__new0, "<init>", "()V");
+    if (_m_PDNameTreeNode__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDNameTreeNode, _m_PDNameTreeNode__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__new1(jobject dict) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSDictionary;)V");
+    if (_m_PDNameTreeNode__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDNameTreeNode, _m_PDNameTreeNode__new1, dict);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSDictionary;");
+    if (_m_PDNameTreeNode__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__getParent = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__getParent(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__getParent, "getParent", "()Lorg/apache/pdfbox/pdmodel/common/PDNameTreeNode;");
+    if (_m_PDNameTreeNode__getParent == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__getParent);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__setParent = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__setParent(jobject self_,jobject parentNode) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__setParent, "setParent", "(Lorg/apache/pdfbox/pdmodel/common/PDNameTreeNode;)V");
+    if (_m_PDNameTreeNode__setParent == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDNameTreeNode__setParent, parentNode);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDNameTreeNode__isRootNode = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__isRootNode(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__isRootNode, "isRootNode", "()Z");
+    if (_m_PDNameTreeNode__isRootNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_PDNameTreeNode__isRootNode);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDNameTreeNode__getKids = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__getKids(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__getKids, "getKids", "()Ljava/util/List;");
+    if (_m_PDNameTreeNode__getKids == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__getKids);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__setKids = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__setKids(jobject self_,jobject kids) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__setKids, "setKids", "(Ljava/util/List;)V");
+    if (_m_PDNameTreeNode__setKids == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDNameTreeNode__setKids, kids);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDNameTreeNode__getValue = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__getValue(jobject self_,jobject name) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__getValue, "getValue", "(Ljava/lang/String;)Lorg/apache/pdfbox/pdmodel/common/COSObjectable;");
+    if (_m_PDNameTreeNode__getValue == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__getValue, name);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__getNames = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__getNames(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__getNames, "getNames", "()Ljava/util/Map;");
+    if (_m_PDNameTreeNode__getNames == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__getNames);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__convertCOSToPD = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__convertCOSToPD(jobject self_,jobject base) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__convertCOSToPD, "convertCOSToPD", "(Lorg/apache/pdfbox/cos/COSBase;)Lorg/apache/pdfbox/pdmodel/common/COSObjectable;");
+    if (_m_PDNameTreeNode__convertCOSToPD == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__convertCOSToPD, base);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__createChildNode = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__createChildNode(jobject self_,jobject dic) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__createChildNode, "createChildNode", "(Lorg/apache/pdfbox/cos/COSDictionary;)Lorg/apache/pdfbox/pdmodel/common/PDNameTreeNode;");
+    if (_m_PDNameTreeNode__createChildNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__createChildNode, dic);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__setNames = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__setNames(jobject self_,jobject names) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__setNames, "setNames", "(Ljava/util/Map;)V");
+    if (_m_PDNameTreeNode__setNames == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDNameTreeNode__setNames, names);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDNameTreeNode__getUpperLimit = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__getUpperLimit(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__getUpperLimit, "getUpperLimit", "()Ljava/lang/String;");
+    if (_m_PDNameTreeNode__getUpperLimit == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__getUpperLimit);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNameTreeNode__getLowerLimit = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNameTreeNode__getLowerLimit(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNameTreeNode, "org/apache/pdfbox/pdmodel/common/PDNameTreeNode");
+    if (_c_PDNameTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNameTreeNode,
+      &_m_PDNameTreeNode__getLowerLimit, "getLowerLimit", "()Ljava/lang/String;");
+    if (_m_PDNameTreeNode__getLowerLimit == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNameTreeNode__getLowerLimit);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.PDNumberTreeNode
+jclass _c_PDNumberTreeNode = NULL;
+
+jmethodID _m_PDNumberTreeNode__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__new0(jobject valueClass) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__new0, "<init>", "(Ljava/lang/Class;)V");
+    if (_m_PDNumberTreeNode__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDNumberTreeNode, _m_PDNumberTreeNode__new0, valueClass);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__new1(jobject dict,jobject valueClass) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSDictionary;Ljava/lang/Class;)V");
+    if (_m_PDNumberTreeNode__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDNumberTreeNode, _m_PDNumberTreeNode__new1, dict, valueClass);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSDictionary;");
+    if (_m_PDNumberTreeNode__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNumberTreeNode__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__getKids = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__getKids(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__getKids, "getKids", "()Ljava/util/List;");
+    if (_m_PDNumberTreeNode__getKids == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNumberTreeNode__getKids);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__setKids = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__setKids(jobject self_,jobject kids) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__setKids, "setKids", "(Ljava/util/List;)V");
+    if (_m_PDNumberTreeNode__setKids == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDNumberTreeNode__setKids, kids);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDNumberTreeNode__getValue = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__getValue(jobject self_,jobject index) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__getValue, "getValue", "(Ljava/lang/Integer;)Ljava/lang/Object;");
+    if (_m_PDNumberTreeNode__getValue == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNumberTreeNode__getValue, index);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__getNumbers = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__getNumbers(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__getNumbers, "getNumbers", "()Ljava/util/Map;");
+    if (_m_PDNumberTreeNode__getNumbers == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNumberTreeNode__getNumbers);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__convertCOSToPD = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__convertCOSToPD(jobject self_,jobject base) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__convertCOSToPD, "convertCOSToPD", "(Lorg/apache/pdfbox/cos/COSBase;)Lorg/apache/pdfbox/pdmodel/common/COSObjectable;");
+    if (_m_PDNumberTreeNode__convertCOSToPD == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNumberTreeNode__convertCOSToPD, base);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__createChildNode = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__createChildNode(jobject self_,jobject dic) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__createChildNode, "createChildNode", "(Lorg/apache/pdfbox/cos/COSDictionary;)Lorg/apache/pdfbox/pdmodel/common/PDNumberTreeNode;");
+    if (_m_PDNumberTreeNode__createChildNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNumberTreeNode__createChildNode, dic);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__setNumbers = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__setNumbers(jobject self_,jobject numbers) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__setNumbers, "setNumbers", "(Ljava/util/Map;)V");
+    if (_m_PDNumberTreeNode__setNumbers == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDNumberTreeNode__setNumbers, numbers);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDNumberTreeNode__getUpperLimit = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__getUpperLimit(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__getUpperLimit, "getUpperLimit", "()Ljava/lang/Integer;");
+    if (_m_PDNumberTreeNode__getUpperLimit == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNumberTreeNode__getUpperLimit);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDNumberTreeNode__getLowerLimit = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDNumberTreeNode__getLowerLimit(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDNumberTreeNode, "org/apache/pdfbox/pdmodel/common/PDNumberTreeNode");
+    if (_c_PDNumberTreeNode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDNumberTreeNode,
+      &_m_PDNumberTreeNode__getLowerLimit, "getLowerLimit", "()Ljava/lang/Integer;");
+    if (_m_PDNumberTreeNode__getLowerLimit == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDNumberTreeNode__getLowerLimit);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.PDObjectStream
+jclass _c_PDObjectStream = NULL;
+
+jmethodID _m_PDObjectStream__new2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__new2(jobject str) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDObjectStream,
+      &_m_PDObjectStream__new2, "<init>", "(Lorg/apache/pdfbox/cos/COSStream;)V");
+    if (_m_PDObjectStream__new2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDObjectStream, _m_PDObjectStream__new2, str);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDObjectStream__createStream = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__createStream(jobject document) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_PDObjectStream,
+      &_m_PDObjectStream__createStream, "createStream", "(Lorg/apache/pdfbox/pdmodel/PDDocument;)Lorg/apache/pdfbox/pdmodel/common/PDObjectStream;");
+    if (_m_PDObjectStream__createStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_PDObjectStream, _m_PDObjectStream__createStream, document);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDObjectStream__getType = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__getType(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDObjectStream,
+      &_m_PDObjectStream__getType, "getType", "()Ljava/lang/String;");
+    if (_m_PDObjectStream__getType == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDObjectStream__getType);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDObjectStream__getNumberOfObjects = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__getNumberOfObjects(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDObjectStream,
+      &_m_PDObjectStream__getNumberOfObjects, "getNumberOfObjects", "()I");
+    if (_m_PDObjectStream__getNumberOfObjects == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDObjectStream__getNumberOfObjects);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDObjectStream__setNumberOfObjects = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__setNumberOfObjects(jobject self_,int32_t n) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDObjectStream,
+      &_m_PDObjectStream__setNumberOfObjects, "setNumberOfObjects", "(I)V");
+    if (_m_PDObjectStream__setNumberOfObjects == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDObjectStream__setNumberOfObjects, n);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDObjectStream__getFirstByteOffset = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__getFirstByteOffset(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDObjectStream,
+      &_m_PDObjectStream__getFirstByteOffset, "getFirstByteOffset", "()I");
+    if (_m_PDObjectStream__getFirstByteOffset == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDObjectStream__getFirstByteOffset);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDObjectStream__setFirstByteOffset = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__setFirstByteOffset(jobject self_,int32_t n) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDObjectStream,
+      &_m_PDObjectStream__setFirstByteOffset, "setFirstByteOffset", "(I)V");
+    if (_m_PDObjectStream__setFirstByteOffset == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDObjectStream__setFirstByteOffset, n);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDObjectStream__getExtends = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__getExtends(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDObjectStream,
+      &_m_PDObjectStream__getExtends, "getExtends", "()Lorg/apache/pdfbox/pdmodel/common/PDObjectStream;");
+    if (_m_PDObjectStream__getExtends == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDObjectStream__getExtends);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDObjectStream__setExtends = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDObjectStream__setExtends(jobject self_,jobject stream) {
+    load_env();
+        load_class_global_ref(&_c_PDObjectStream, "org/apache/pdfbox/pdmodel/common/PDObjectStream");
+    if (_c_PDObjectStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDObjectStream,
+      &_m_PDObjectStream__setExtends, "setExtends", "(Lorg/apache/pdfbox/pdmodel/common/PDObjectStream;)V");
+    if (_m_PDObjectStream__setExtends == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDObjectStream__setExtends, stream);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.PDPageLabelRange
+jclass _c_PDPageLabelRange = NULL;
+
+jmethodID _m_PDPageLabelRange__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__new0() {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__new0, "<init>", "()V");
+    if (_m_PDPageLabelRange__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDPageLabelRange, _m_PDPageLabelRange__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabelRange__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__new1(jobject dict) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSDictionary;)V");
+    if (_m_PDPageLabelRange__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDPageLabelRange, _m_PDPageLabelRange__new1, dict);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabelRange__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSDictionary;");
+    if (_m_PDPageLabelRange__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDPageLabelRange__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabelRange__getStyle = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__getStyle(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__getStyle, "getStyle", "()Ljava/lang/String;");
+    if (_m_PDPageLabelRange__getStyle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDPageLabelRange__getStyle);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabelRange__setStyle = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__setStyle(jobject self_,jobject style) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__setStyle, "setStyle", "(Ljava/lang/String;)V");
+    if (_m_PDPageLabelRange__setStyle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDPageLabelRange__setStyle, style);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDPageLabelRange__getStart = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__getStart(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__getStart, "getStart", "()I");
+    if (_m_PDPageLabelRange__getStart == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDPageLabelRange__getStart);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDPageLabelRange__setStart = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__setStart(jobject self_,int32_t start) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__setStart, "setStart", "(I)V");
+    if (_m_PDPageLabelRange__setStart == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDPageLabelRange__setStart, start);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDPageLabelRange__getPrefix = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__getPrefix(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__getPrefix, "getPrefix", "()Ljava/lang/String;");
+    if (_m_PDPageLabelRange__getPrefix == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDPageLabelRange__getPrefix);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabelRange__setPrefix = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabelRange__setPrefix(jobject self_,jobject prefix) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabelRange, "org/apache/pdfbox/pdmodel/common/PDPageLabelRange");
+    if (_c_PDPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabelRange,
+      &_m_PDPageLabelRange__setPrefix, "setPrefix", "(Ljava/lang/String;)V");
+    if (_m_PDPageLabelRange__setPrefix == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDPageLabelRange__setPrefix, prefix);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.PDPageLabels
+jclass _c_PDPageLabels = NULL;
+
+jmethodID _m_PDPageLabels__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__new0(jobject document) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__new0, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;)V");
+    if (_m_PDPageLabels__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDPageLabels, _m_PDPageLabels__new0, document);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabels__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__new1(jobject document,jobject dict) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__new1, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;Lorg/apache/pdfbox/cos/COSDictionary;)V");
+    if (_m_PDPageLabels__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDPageLabels, _m_PDPageLabels__new1, document, dict);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabels__getPageRangeCount = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__getPageRangeCount(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__getPageRangeCount, "getPageRangeCount", "()I");
+    if (_m_PDPageLabels__getPageRangeCount == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDPageLabels__getPageRangeCount);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDPageLabels__getPageLabelRange = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__getPageLabelRange(jobject self_,int32_t startPage) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__getPageLabelRange, "getPageLabelRange", "(I)Lorg/apache/pdfbox/pdmodel/common/PDPageLabelRange;");
+    if (_m_PDPageLabels__getPageLabelRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDPageLabels__getPageLabelRange, startPage);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabels__setLabelItem = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__setLabelItem(jobject self_,int32_t startPage,jobject item) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__setLabelItem, "setLabelItem", "(ILorg/apache/pdfbox/pdmodel/common/PDPageLabelRange;)V");
+    if (_m_PDPageLabels__setLabelItem == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDPageLabels__setLabelItem, startPage, item);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDPageLabels__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSBase;");
+    if (_m_PDPageLabels__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDPageLabels__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabels__getPageIndicesByLabels = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__getPageIndicesByLabels(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__getPageIndicesByLabels, "getPageIndicesByLabels", "()Ljava/util/Map;");
+    if (_m_PDPageLabels__getPageIndicesByLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDPageLabels__getPageIndicesByLabels);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabels__getLabelsByPageIndices = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__getLabelsByPageIndices(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__getLabelsByPageIndices, "getLabelsByPageIndices", "()[Ljava/lang/String;");
+    if (_m_PDPageLabels__getLabelsByPageIndices == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDPageLabels__getLabelsByPageIndices);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDPageLabels__getPageIndices = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDPageLabels__getPageIndices(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDPageLabels, "org/apache/pdfbox/pdmodel/common/PDPageLabels");
+    if (_c_PDPageLabels == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDPageLabels,
+      &_m_PDPageLabels__getPageIndices, "getPageIndices", "()Ljava/util/NavigableSet;");
+    if (_m_PDPageLabels__getPageIndices == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDPageLabels__getPageIndices);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.PDRange
+jclass _c_PDRange = NULL;
+
+jmethodID _m_PDRange__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__new0() {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__new0, "<init>", "()V");
+    if (_m_PDRange__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDRange, _m_PDRange__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRange__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__new1(jobject range) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSArray;)V");
+    if (_m_PDRange__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDRange, _m_PDRange__new1, range);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRange__new2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__new2(jobject range,int32_t index) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__new2, "<init>", "(Lorg/apache/pdfbox/cos/COSArray;I)V");
+    if (_m_PDRange__new2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDRange, _m_PDRange__new2, range, index);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRange__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSBase;");
+    if (_m_PDRange__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRange__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRange__getCOSArray = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__getCOSArray(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__getCOSArray, "getCOSArray", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDRange__getCOSArray == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRange__getCOSArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRange__getMin = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__getMin(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__getMin, "getMin", "()F");
+    if (_m_PDRange__getMin == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDRange__getMin);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRange__setMin = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__setMin(jobject self_,float min) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__setMin, "setMin", "(F)V");
+    if (_m_PDRange__setMin == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDRange__setMin, min);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRange__getMax = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__getMax(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__getMax, "getMax", "()F");
+    if (_m_PDRange__getMax == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDRange__getMax);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRange__setMax = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__setMax(jobject self_,float max) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__setMax, "setMax", "(F)V");
+    if (_m_PDRange__setMax == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDRange__setMax, max);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRange__toString1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRange__toString1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRange, "org/apache/pdfbox/pdmodel/common/PDRange");
+    if (_c_PDRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRange,
+      &_m_PDRange__toString1, "toString", "()Ljava/lang/String;");
+    if (_m_PDRange__toString1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRange__toString1);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.PDRectangle
+jclass _c_PDRectangle = NULL;
+
+jmethodID _m_PDRectangle__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__new0() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__new0, "<init>", "()V");
+    if (_m_PDRectangle__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDRectangle, _m_PDRectangle__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__new1(float width,float height) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__new1, "<init>", "(FF)V");
+    if (_m_PDRectangle__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDRectangle, _m_PDRectangle__new1, width, height);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__new2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__new2(float x,float y,float width,float height) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__new2, "<init>", "(FFFF)V");
+    if (_m_PDRectangle__new2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDRectangle, _m_PDRectangle__new2, x, y, width, height);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__new3 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__new3(jobject box) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__new3, "<init>", "(Lorg/apache/fontbox/util/BoundingBox;)V");
+    if (_m_PDRectangle__new3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDRectangle, _m_PDRectangle__new3, box);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__new4 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__new4(jobject array) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__new4, "<init>", "(Lorg/apache/pdfbox/cos/COSArray;)V");
+    if (_m_PDRectangle__new4 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDRectangle, _m_PDRectangle__new4, array);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__contains = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__contains(jobject self_,float x,float y) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__contains, "contains", "(FF)Z");
+    if (_m_PDRectangle__contains == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_PDRectangle__contains, x, y);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__createRetranslatedRectangle = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__createRetranslatedRectangle(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__createRetranslatedRectangle, "createRetranslatedRectangle", "()Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    if (_m_PDRectangle__createRetranslatedRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRectangle__createRetranslatedRectangle);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__getCOSArray = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__getCOSArray(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__getCOSArray, "getCOSArray", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDRectangle__getCOSArray == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRectangle__getCOSArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__getLowerLeftX = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__getLowerLeftX(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__getLowerLeftX, "getLowerLeftX", "()F");
+    if (_m_PDRectangle__getLowerLeftX == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDRectangle__getLowerLeftX);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__setLowerLeftX = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__setLowerLeftX(jobject self_,float value) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__setLowerLeftX, "setLowerLeftX", "(F)V");
+    if (_m_PDRectangle__setLowerLeftX == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDRectangle__setLowerLeftX, value);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__getLowerLeftY = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__getLowerLeftY(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__getLowerLeftY, "getLowerLeftY", "()F");
+    if (_m_PDRectangle__getLowerLeftY == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDRectangle__getLowerLeftY);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__setLowerLeftY = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__setLowerLeftY(jobject self_,float value) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__setLowerLeftY, "setLowerLeftY", "(F)V");
+    if (_m_PDRectangle__setLowerLeftY == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDRectangle__setLowerLeftY, value);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__getUpperRightX = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__getUpperRightX(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__getUpperRightX, "getUpperRightX", "()F");
+    if (_m_PDRectangle__getUpperRightX == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDRectangle__getUpperRightX);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__setUpperRightX = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__setUpperRightX(jobject self_,float value) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__setUpperRightX, "setUpperRightX", "(F)V");
+    if (_m_PDRectangle__setUpperRightX == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDRectangle__setUpperRightX, value);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__getUpperRightY = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__getUpperRightY(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__getUpperRightY, "getUpperRightY", "()F");
+    if (_m_PDRectangle__getUpperRightY == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDRectangle__getUpperRightY);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__setUpperRightY = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__setUpperRightY(jobject self_,float value) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__setUpperRightY, "setUpperRightY", "(F)V");
+    if (_m_PDRectangle__setUpperRightY == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDRectangle__setUpperRightY, value);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__getWidth = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__getWidth(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__getWidth, "getWidth", "()F");
+    if (_m_PDRectangle__getWidth == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDRectangle__getWidth);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__getHeight = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__getHeight(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__getHeight, "getHeight", "()F");
+    if (_m_PDRectangle__getHeight == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDRectangle__getHeight);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDRectangle__transform = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__transform(jobject self_,jobject matrix) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__transform, "transform", "(Lorg/apache/pdfbox/util/Matrix;)Ljava/awt/geom/GeneralPath;");
+    if (_m_PDRectangle__transform == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRectangle__transform, matrix);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSBase;");
+    if (_m_PDRectangle__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRectangle__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__toGeneralPath = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__toGeneralPath(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__toGeneralPath, "toGeneralPath", "()Ljava/awt/geom/GeneralPath;");
+    if (_m_PDRectangle__toGeneralPath == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRectangle__toGeneralPath);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDRectangle__toString1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDRectangle__toString1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDRectangle,
+      &_m_PDRectangle__toString1, "toString", "()Ljava/lang/String;");
+    if (_m_PDRectangle__toString1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDRectangle__toString1);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__LETTER = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__LETTER() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__LETTER, "LETTER",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__LETTER);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__LEGAL = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__LEGAL() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__LEGAL, "LEGAL",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__LEGAL);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__A0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__A0() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__A0, "A0",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__A0);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__A1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__A1() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__A1, "A1",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__A1);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__A2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__A2() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__A2, "A2",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__A2);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__A3 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__A3() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__A3, "A3",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__A3);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__A4 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__A4() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__A4, "A4",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__A4);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__A5 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__A5() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__A5, "A5",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__A5);
+    return to_global_ref_result(_result);
+}
+
+jfieldID _f_PDRectangle__A6 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult get_PDRectangle__A6() {
+    load_env();
+        load_class_global_ref(&_c_PDRectangle, "org/apache/pdfbox/pdmodel/common/PDRectangle");
+    if (_c_PDRectangle == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_field(_c_PDRectangle, &_f_PDRectangle__A6, "A6",
+      "Lorg/apache/pdfbox/pdmodel/common/PDRectangle;");
+    jobject _result = (*jniEnv)->GetStaticObjectField(jniEnv, _c_PDRectangle, _f_PDRectangle__A6);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.PDStream
+jclass _c_PDStream = NULL;
+
+jmethodID _m_PDStream__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__new0(jobject document) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__new0, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;)V");
+    if (_m_PDStream__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDStream, _m_PDStream__new0, document);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__new1(jobject document) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSDocument;)V");
+    if (_m_PDStream__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDStream, _m_PDStream__new1, document);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__new2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__new2(jobject str) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__new2, "<init>", "(Lorg/apache/pdfbox/cos/COSStream;)V");
+    if (_m_PDStream__new2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDStream, _m_PDStream__new2, str);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__new3 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__new3(jobject doc,jobject input) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__new3, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;Ljava/io/InputStream;)V");
+    if (_m_PDStream__new3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDStream, _m_PDStream__new3, doc, input);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__new4 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__new4(jobject doc,jobject input,jobject filter) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__new4, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;Ljava/io/InputStream;Lorg/apache/pdfbox/cos/COSName;)V");
+    if (_m_PDStream__new4 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDStream, _m_PDStream__new4, doc, input, filter);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__new5 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__new5(jobject doc,jobject input,jobject filters) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__new5, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;Ljava/io/InputStream;Lorg/apache/pdfbox/cos/COSArray;)V");
+    if (_m_PDStream__new5 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDStream, _m_PDStream__new5, doc, input, filters);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__addCompression = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__addCompression(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__addCompression, "addCompression", "()V");
+    if (_m_PDStream__addCompression == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDStream__addCompression);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSStream;");
+    if (_m_PDStream__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__createOutputStream = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__createOutputStream(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__createOutputStream, "createOutputStream", "()Ljava/io/OutputStream;");
+    if (_m_PDStream__createOutputStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__createOutputStream);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__createOutputStream1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__createOutputStream1(jobject self_,jobject filter) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__createOutputStream1, "createOutputStream", "(Lorg/apache/pdfbox/cos/COSName;)Ljava/io/OutputStream;");
+    if (_m_PDStream__createOutputStream1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__createOutputStream1, filter);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__createInputStream = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__createInputStream(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__createInputStream, "createInputStream", "()Lorg/apache/pdfbox/cos/COSInputStream;");
+    if (_m_PDStream__createInputStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__createInputStream);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__createInputStream1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__createInputStream1(jobject self_,jobject options) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__createInputStream1, "createInputStream", "(Lorg/apache/pdfbox/filter/DecodeOptions;)Lorg/apache/pdfbox/cos/COSInputStream;");
+    if (_m_PDStream__createInputStream1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__createInputStream1, options);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__createInputStream2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__createInputStream2(jobject self_,jobject stopFilters) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__createInputStream2, "createInputStream", "(Ljava/util/List;)Ljava/io/InputStream;");
+    if (_m_PDStream__createInputStream2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__createInputStream2, stopFilters);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__getStream = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getStream(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getStream, "getStream", "()Lorg/apache/pdfbox/cos/COSStream;");
+    if (_m_PDStream__getStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__getStream);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__getLength = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getLength(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getLength, "getLength", "()I");
+    if (_m_PDStream__getLength == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDStream__getLength);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__getFilters = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getFilters(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getFilters, "getFilters", "()Ljava/util/List;");
+    if (_m_PDStream__getFilters == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__getFilters);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__setFilters = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__setFilters(jobject self_,jobject filters) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__setFilters, "setFilters", "(Ljava/util/List;)V");
+    if (_m_PDStream__setFilters == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDStream__setFilters, filters);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__getDecodeParms = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getDecodeParms(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getDecodeParms, "getDecodeParms", "()Ljava/util/List;");
+    if (_m_PDStream__getDecodeParms == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__getDecodeParms);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__getFileDecodeParams = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getFileDecodeParams(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getFileDecodeParams, "getFileDecodeParams", "()Ljava/util/List;");
+    if (_m_PDStream__getFileDecodeParams == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__getFileDecodeParams);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__setDecodeParms = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__setDecodeParms(jobject self_,jobject decodeParams) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__setDecodeParms, "setDecodeParms", "(Ljava/util/List;)V");
+    if (_m_PDStream__setDecodeParms == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDStream__setDecodeParms, decodeParams);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__getFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getFile(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getFile, "getFile", "()Lorg/apache/pdfbox/pdmodel/common/filespecification/PDFileSpecification;");
+    if (_m_PDStream__getFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__getFile);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__setFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__setFile(jobject self_,jobject f) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__setFile, "setFile", "(Lorg/apache/pdfbox/pdmodel/common/filespecification/PDFileSpecification;)V");
+    if (_m_PDStream__setFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDStream__setFile, f);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__getFileFilters = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getFileFilters(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getFileFilters, "getFileFilters", "()Ljava/util/List;");
+    if (_m_PDStream__getFileFilters == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__getFileFilters);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__setFileFilters = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__setFileFilters(jobject self_,jobject filters) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__setFileFilters, "setFileFilters", "(Ljava/util/List;)V");
+    if (_m_PDStream__setFileFilters == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDStream__setFileFilters, filters);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__setFileDecodeParams = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__setFileDecodeParams(jobject self_,jobject decodeParams) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__setFileDecodeParams, "setFileDecodeParams", "(Ljava/util/List;)V");
+    if (_m_PDStream__setFileDecodeParams == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDStream__setFileDecodeParams, decodeParams);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__toByteArray = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__toByteArray(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__toByteArray, "toByteArray", "()[B");
+    if (_m_PDStream__toByteArray == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__toByteArray);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__getMetadata = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getMetadata(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getMetadata, "getMetadata", "()Lorg/apache/pdfbox/pdmodel/common/PDMetadata;");
+    if (_m_PDStream__getMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDStream__getMetadata);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDStream__setMetadata = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__setMetadata(jobject self_,jobject meta) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__setMetadata, "setMetadata", "(Lorg/apache/pdfbox/pdmodel/common/PDMetadata;)V");
+    if (_m_PDStream__setMetadata == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDStream__setMetadata, meta);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__getDecodedStreamLength = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__getDecodedStreamLength(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__getDecodedStreamLength, "getDecodedStreamLength", "()I");
+    if (_m_PDStream__getDecodedStreamLength == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDStream__getDecodedStreamLength);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDStream__setDecodedStreamLength = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDStream__setDecodedStreamLength(jobject self_,int32_t decodedStreamLength) {
+    load_env();
+        load_class_global_ref(&_c_PDStream, "org/apache/pdfbox/pdmodel/common/PDStream");
+    if (_c_PDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDStream,
+      &_m_PDStream__setDecodedStreamLength, "setDecodedStreamLength", "(I)V");
+    if (_m_PDStream__setDecodedStreamLength == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDStream__setDecodedStreamLength, decodedStreamLength);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.PDTypedDictionaryWrapper
+jclass _c_PDTypedDictionaryWrapper = NULL;
+
+jmethodID _m_PDTypedDictionaryWrapper__new2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDTypedDictionaryWrapper__new2(jobject type) {
+    load_env();
+        load_class_global_ref(&_c_PDTypedDictionaryWrapper, "org/apache/pdfbox/pdmodel/common/PDTypedDictionaryWrapper");
+    if (_c_PDTypedDictionaryWrapper == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDTypedDictionaryWrapper,
+      &_m_PDTypedDictionaryWrapper__new2, "<init>", "(Ljava/lang/String;)V");
+    if (_m_PDTypedDictionaryWrapper__new2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDTypedDictionaryWrapper, _m_PDTypedDictionaryWrapper__new2, type);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDTypedDictionaryWrapper__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDTypedDictionaryWrapper__new1(jobject dictionary) {
+    load_env();
+        load_class_global_ref(&_c_PDTypedDictionaryWrapper, "org/apache/pdfbox/pdmodel/common/PDTypedDictionaryWrapper");
+    if (_c_PDTypedDictionaryWrapper == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDTypedDictionaryWrapper,
+      &_m_PDTypedDictionaryWrapper__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSDictionary;)V");
+    if (_m_PDTypedDictionaryWrapper__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDTypedDictionaryWrapper, _m_PDTypedDictionaryWrapper__new1, dictionary);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDTypedDictionaryWrapper__getType = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDTypedDictionaryWrapper__getType(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDTypedDictionaryWrapper, "org/apache/pdfbox/pdmodel/common/PDTypedDictionaryWrapper");
+    if (_c_PDTypedDictionaryWrapper == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDTypedDictionaryWrapper,
+      &_m_PDTypedDictionaryWrapper__getType, "getType", "()Ljava/lang/String;");
+    if (_m_PDTypedDictionaryWrapper__getType == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDTypedDictionaryWrapper__getType);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.filespecification.PDComplexFileSpecification
+jclass _c_PDComplexFileSpecification = NULL;
+
+jmethodID _m_PDComplexFileSpecification__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__new0() {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__new0, "<init>", "()V");
+    if (_m_PDComplexFileSpecification__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDComplexFileSpecification, _m_PDComplexFileSpecification__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__new1(jobject dict) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSDictionary;)V");
+    if (_m_PDComplexFileSpecification__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDComplexFileSpecification, _m_PDComplexFileSpecification__new1, dict);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSDictionary;");
+    if (_m_PDComplexFileSpecification__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__getFilename = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getFilename(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getFilename, "getFilename", "()Ljava/lang/String;");
+    if (_m_PDComplexFileSpecification__getFilename == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getFilename);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__getFileUnicode = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getFileUnicode(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getFileUnicode, "getFileUnicode", "()Ljava/lang/String;");
+    if (_m_PDComplexFileSpecification__getFileUnicode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getFileUnicode);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setFileUnicode = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setFileUnicode(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setFileUnicode, "setFileUnicode", "(Ljava/lang/String;)V");
+    if (_m_PDComplexFileSpecification__setFileUnicode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setFileUnicode, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getFile(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getFile, "getFile", "()Ljava/lang/String;");
+    if (_m_PDComplexFileSpecification__getFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getFile);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setFile(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setFile, "setFile", "(Ljava/lang/String;)V");
+    if (_m_PDComplexFileSpecification__setFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setFile, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getFileDos = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getFileDos(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getFileDos, "getFileDos", "()Ljava/lang/String;");
+    if (_m_PDComplexFileSpecification__getFileDos == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getFileDos);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setFileDos = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setFileDos(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setFileDos, "setFileDos", "(Ljava/lang/String;)V");
+    if (_m_PDComplexFileSpecification__setFileDos == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setFileDos, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getFileMac = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getFileMac(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getFileMac, "getFileMac", "()Ljava/lang/String;");
+    if (_m_PDComplexFileSpecification__getFileMac == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getFileMac);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setFileMac = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setFileMac(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setFileMac, "setFileMac", "(Ljava/lang/String;)V");
+    if (_m_PDComplexFileSpecification__setFileMac == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setFileMac, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getFileUnix = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getFileUnix(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getFileUnix, "getFileUnix", "()Ljava/lang/String;");
+    if (_m_PDComplexFileSpecification__getFileUnix == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getFileUnix);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setFileUnix = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setFileUnix(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setFileUnix, "setFileUnix", "(Ljava/lang/String;)V");
+    if (_m_PDComplexFileSpecification__setFileUnix == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setFileUnix, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__setVolatile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setVolatile(jobject self_,uint8_t fileIsVolatile) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setVolatile, "setVolatile", "(Z)V");
+    if (_m_PDComplexFileSpecification__setVolatile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setVolatile, fileIsVolatile);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__isVolatile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__isVolatile(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__isVolatile, "isVolatile", "()Z");
+    if (_m_PDComplexFileSpecification__isVolatile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    uint8_t _result = (*jniEnv)->CallBooleanMethod(jniEnv, self_, _m_PDComplexFileSpecification__isVolatile);
+    return (JniResult){.value = {.z = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getEmbeddedFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getEmbeddedFile(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getEmbeddedFile, "getEmbeddedFile", "()Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;");
+    if (_m_PDComplexFileSpecification__getEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getEmbeddedFile);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setEmbeddedFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setEmbeddedFile(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setEmbeddedFile, "setEmbeddedFile", "(Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;)V");
+    if (_m_PDComplexFileSpecification__setEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setEmbeddedFile, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getEmbeddedFileDos = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getEmbeddedFileDos(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getEmbeddedFileDos, "getEmbeddedFileDos", "()Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;");
+    if (_m_PDComplexFileSpecification__getEmbeddedFileDos == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getEmbeddedFileDos);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setEmbeddedFileDos = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setEmbeddedFileDos(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setEmbeddedFileDos, "setEmbeddedFileDos", "(Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;)V");
+    if (_m_PDComplexFileSpecification__setEmbeddedFileDos == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setEmbeddedFileDos, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getEmbeddedFileMac = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getEmbeddedFileMac(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getEmbeddedFileMac, "getEmbeddedFileMac", "()Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;");
+    if (_m_PDComplexFileSpecification__getEmbeddedFileMac == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getEmbeddedFileMac);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setEmbeddedFileMac = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setEmbeddedFileMac(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setEmbeddedFileMac, "setEmbeddedFileMac", "(Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;)V");
+    if (_m_PDComplexFileSpecification__setEmbeddedFileMac == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setEmbeddedFileMac, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getEmbeddedFileUnix = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getEmbeddedFileUnix(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getEmbeddedFileUnix, "getEmbeddedFileUnix", "()Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;");
+    if (_m_PDComplexFileSpecification__getEmbeddedFileUnix == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getEmbeddedFileUnix);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setEmbeddedFileUnix = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setEmbeddedFileUnix(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setEmbeddedFileUnix, "setEmbeddedFileUnix", "(Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;)V");
+    if (_m_PDComplexFileSpecification__setEmbeddedFileUnix == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setEmbeddedFileUnix, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getEmbeddedFileUnicode = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getEmbeddedFileUnicode(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getEmbeddedFileUnicode, "getEmbeddedFileUnicode", "()Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;");
+    if (_m_PDComplexFileSpecification__getEmbeddedFileUnicode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getEmbeddedFileUnicode);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDComplexFileSpecification__setEmbeddedFileUnicode = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setEmbeddedFileUnicode(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setEmbeddedFileUnicode, "setEmbeddedFileUnicode", "(Lorg/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile;)V");
+    if (_m_PDComplexFileSpecification__setEmbeddedFileUnicode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setEmbeddedFileUnicode, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__setFileDescription = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__setFileDescription(jobject self_,jobject description) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__setFileDescription, "setFileDescription", "(Ljava/lang/String;)V");
+    if (_m_PDComplexFileSpecification__setFileDescription == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDComplexFileSpecification__setFileDescription, description);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDComplexFileSpecification__getFileDescription = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDComplexFileSpecification__getFileDescription(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDComplexFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDComplexFileSpecification");
+    if (_c_PDComplexFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDComplexFileSpecification,
+      &_m_PDComplexFileSpecification__getFileDescription, "getFileDescription", "()Ljava/lang/String;");
+    if (_m_PDComplexFileSpecification__getFileDescription == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDComplexFileSpecification__getFileDescription);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.filespecification.PDEmbeddedFile
+jclass _c_PDEmbeddedFile = NULL;
+
+jmethodID _m_PDEmbeddedFile__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__new0(jobject document) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__new0, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;)V");
+    if (_m_PDEmbeddedFile__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDEmbeddedFile, _m_PDEmbeddedFile__new0, document);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__new2 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__new2(jobject str) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__new2, "<init>", "(Lorg/apache/pdfbox/cos/COSStream;)V");
+    if (_m_PDEmbeddedFile__new2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDEmbeddedFile, _m_PDEmbeddedFile__new2, str);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__new3 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__new3(jobject doc,jobject str) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__new3, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;Ljava/io/InputStream;)V");
+    if (_m_PDEmbeddedFile__new3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDEmbeddedFile, _m_PDEmbeddedFile__new3, doc, str);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__new4 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__new4(jobject doc,jobject input,jobject filter) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__new4, "<init>", "(Lorg/apache/pdfbox/pdmodel/PDDocument;Ljava/io/InputStream;Lorg/apache/pdfbox/cos/COSName;)V");
+    if (_m_PDEmbeddedFile__new4 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDEmbeddedFile, _m_PDEmbeddedFile__new4, doc, input, filter);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__setSubtype = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__setSubtype(jobject self_,jobject mimeType) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__setSubtype, "setSubtype", "(Ljava/lang/String;)V");
+    if (_m_PDEmbeddedFile__setSubtype == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDEmbeddedFile__setSubtype, mimeType);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDEmbeddedFile__getSubtype = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__getSubtype(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__getSubtype, "getSubtype", "()Ljava/lang/String;");
+    if (_m_PDEmbeddedFile__getSubtype == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDEmbeddedFile__getSubtype);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__getSize = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__getSize(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__getSize, "getSize", "()I");
+    if (_m_PDEmbeddedFile__getSize == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDEmbeddedFile__getSize);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDEmbeddedFile__setSize = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__setSize(jobject self_,int32_t size) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__setSize, "setSize", "(I)V");
+    if (_m_PDEmbeddedFile__setSize == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDEmbeddedFile__setSize, size);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDEmbeddedFile__getCreationDate = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__getCreationDate(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__getCreationDate, "getCreationDate", "()Ljava/util/Calendar;");
+    if (_m_PDEmbeddedFile__getCreationDate == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDEmbeddedFile__getCreationDate);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__setCreationDate = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__setCreationDate(jobject self_,jobject creation) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__setCreationDate, "setCreationDate", "(Ljava/util/Calendar;)V");
+    if (_m_PDEmbeddedFile__setCreationDate == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDEmbeddedFile__setCreationDate, creation);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDEmbeddedFile__getModDate = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__getModDate(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__getModDate, "getModDate", "()Ljava/util/Calendar;");
+    if (_m_PDEmbeddedFile__getModDate == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDEmbeddedFile__getModDate);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__setModDate = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__setModDate(jobject self_,jobject mod) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__setModDate, "setModDate", "(Ljava/util/Calendar;)V");
+    if (_m_PDEmbeddedFile__setModDate == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDEmbeddedFile__setModDate, mod);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDEmbeddedFile__getCheckSum = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__getCheckSum(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__getCheckSum, "getCheckSum", "()Ljava/lang/String;");
+    if (_m_PDEmbeddedFile__getCheckSum == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDEmbeddedFile__getCheckSum);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__setCheckSum = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__setCheckSum(jobject self_,jobject checksum) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__setCheckSum, "setCheckSum", "(Ljava/lang/String;)V");
+    if (_m_PDEmbeddedFile__setCheckSum == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDEmbeddedFile__setCheckSum, checksum);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDEmbeddedFile__getMacSubtype = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__getMacSubtype(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__getMacSubtype, "getMacSubtype", "()Ljava/lang/String;");
+    if (_m_PDEmbeddedFile__getMacSubtype == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDEmbeddedFile__getMacSubtype);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__setMacSubtype = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__setMacSubtype(jobject self_,jobject macSubtype) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__setMacSubtype, "setMacSubtype", "(Ljava/lang/String;)V");
+    if (_m_PDEmbeddedFile__setMacSubtype == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDEmbeddedFile__setMacSubtype, macSubtype);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDEmbeddedFile__getMacCreator = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__getMacCreator(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__getMacCreator, "getMacCreator", "()Ljava/lang/String;");
+    if (_m_PDEmbeddedFile__getMacCreator == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDEmbeddedFile__getMacCreator);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__setMacCreator = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__setMacCreator(jobject self_,jobject macCreator) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__setMacCreator, "setMacCreator", "(Ljava/lang/String;)V");
+    if (_m_PDEmbeddedFile__setMacCreator == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDEmbeddedFile__setMacCreator, macCreator);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDEmbeddedFile__getMacResFork = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__getMacResFork(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__getMacResFork, "getMacResFork", "()Ljava/lang/String;");
+    if (_m_PDEmbeddedFile__getMacResFork == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDEmbeddedFile__getMacResFork);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDEmbeddedFile__setMacResFork = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDEmbeddedFile__setMacResFork(jobject self_,jobject macResFork) {
+    load_env();
+        load_class_global_ref(&_c_PDEmbeddedFile, "org/apache/pdfbox/pdmodel/common/filespecification/PDEmbeddedFile");
+    if (_c_PDEmbeddedFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDEmbeddedFile,
+      &_m_PDEmbeddedFile__setMacResFork, "setMacResFork", "(Ljava/lang/String;)V");
+    if (_m_PDEmbeddedFile__setMacResFork == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDEmbeddedFile__setMacResFork, macResFork);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.filespecification.PDFileSpecification
+jclass _c_PDFileSpecification = NULL;
+
+jmethodID _m_PDFileSpecification__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFileSpecification__new0() {
+    load_env();
+        load_class_global_ref(&_c_PDFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDFileSpecification");
+    if (_c_PDFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFileSpecification,
+      &_m_PDFileSpecification__new0, "<init>", "()V");
+    if (_m_PDFileSpecification__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDFileSpecification, _m_PDFileSpecification__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFileSpecification__createFS = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFileSpecification__createFS(jobject base) {
+    load_env();
+        load_class_global_ref(&_c_PDFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDFileSpecification");
+    if (_c_PDFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_PDFileSpecification,
+      &_m_PDFileSpecification__createFS, "createFS", "(Lorg/apache/pdfbox/cos/COSBase;)Lorg/apache/pdfbox/pdmodel/common/filespecification/PDFileSpecification;");
+    if (_m_PDFileSpecification__createFS == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_PDFileSpecification, _m_PDFileSpecification__createFS, base);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFileSpecification__getFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFileSpecification__getFile(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDFileSpecification");
+    if (_c_PDFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFileSpecification,
+      &_m_PDFileSpecification__getFile, "getFile", "()Ljava/lang/String;");
+    if (_m_PDFileSpecification__getFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFileSpecification__getFile);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFileSpecification__setFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFileSpecification__setFile(jobject self_,jobject file) {
+    load_env();
+        load_class_global_ref(&_c_PDFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDFileSpecification");
+    if (_c_PDFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFileSpecification,
+      &_m_PDFileSpecification__setFile, "setFile", "(Ljava/lang/String;)V");
+    if (_m_PDFileSpecification__setFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDFileSpecification__setFile, file);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.filespecification.PDSimpleFileSpecification
+jclass _c_PDSimpleFileSpecification = NULL;
+
+jmethodID _m_PDSimpleFileSpecification__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDSimpleFileSpecification__new0() {
+    load_env();
+        load_class_global_ref(&_c_PDSimpleFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDSimpleFileSpecification");
+    if (_c_PDSimpleFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDSimpleFileSpecification,
+      &_m_PDSimpleFileSpecification__new0, "<init>", "()V");
+    if (_m_PDSimpleFileSpecification__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDSimpleFileSpecification, _m_PDSimpleFileSpecification__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDSimpleFileSpecification__new1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDSimpleFileSpecification__new1(jobject fileName) {
+    load_env();
+        load_class_global_ref(&_c_PDSimpleFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDSimpleFileSpecification");
+    if (_c_PDSimpleFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDSimpleFileSpecification,
+      &_m_PDSimpleFileSpecification__new1, "<init>", "(Lorg/apache/pdfbox/cos/COSString;)V");
+    if (_m_PDSimpleFileSpecification__new1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDSimpleFileSpecification, _m_PDSimpleFileSpecification__new1, fileName);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDSimpleFileSpecification__getFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDSimpleFileSpecification__getFile(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDSimpleFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDSimpleFileSpecification");
+    if (_c_PDSimpleFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDSimpleFileSpecification,
+      &_m_PDSimpleFileSpecification__getFile, "getFile", "()Ljava/lang/String;");
+    if (_m_PDSimpleFileSpecification__getFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDSimpleFileSpecification__getFile);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDSimpleFileSpecification__setFile = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDSimpleFileSpecification__setFile(jobject self_,jobject fileName) {
+    load_env();
+        load_class_global_ref(&_c_PDSimpleFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDSimpleFileSpecification");
+    if (_c_PDSimpleFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDSimpleFileSpecification,
+      &_m_PDSimpleFileSpecification__setFile, "setFile", "(Ljava/lang/String;)V");
+    if (_m_PDSimpleFileSpecification__setFile == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDSimpleFileSpecification__setFile, fileName);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDSimpleFileSpecification__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDSimpleFileSpecification__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDSimpleFileSpecification, "org/apache/pdfbox/pdmodel/common/filespecification/PDSimpleFileSpecification");
+    if (_c_PDSimpleFileSpecification == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDSimpleFileSpecification,
+      &_m_PDSimpleFileSpecification__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSBase;");
+    if (_m_PDSimpleFileSpecification__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDSimpleFileSpecification__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.function.PDFunction
+jclass _c_PDFunction = NULL;
+
+jmethodID _m_PDFunction__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__new0(jobject function) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__new0, "<init>", "(Lorg/apache/pdfbox/cos/COSBase;)V");
+    if (_m_PDFunction__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDFunction, _m_PDFunction__new0, function);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__getFunctionType = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__getFunctionType(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__getFunctionType, "getFunctionType", "()I");
+    if (_m_PDFunction__getFunctionType == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunction__getFunctionType);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunction__getCOSObject = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__getCOSObject(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__getCOSObject, "getCOSObject", "()Lorg/apache/pdfbox/cos/COSDictionary;");
+    if (_m_PDFunction__getCOSObject == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__getCOSObject);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__getPDStream = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__getPDStream(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__getPDStream, "getPDStream", "()Lorg/apache/pdfbox/pdmodel/common/PDStream;");
+    if (_m_PDFunction__getPDStream == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__getPDStream);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__create = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__create(jobject function) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_PDFunction,
+      &_m_PDFunction__create, "create", "(Lorg/apache/pdfbox/cos/COSBase;)Lorg/apache/pdfbox/pdmodel/common/function/PDFunction;");
+    if (_m_PDFunction__create == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_PDFunction, _m_PDFunction__create, function);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__getNumberOfOutputParameters = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__getNumberOfOutputParameters(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__getNumberOfOutputParameters, "getNumberOfOutputParameters", "()I");
+    if (_m_PDFunction__getNumberOfOutputParameters == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunction__getNumberOfOutputParameters);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunction__getRangeForOutput = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__getRangeForOutput(jobject self_,int32_t n) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__getRangeForOutput, "getRangeForOutput", "(I)Lorg/apache/pdfbox/pdmodel/common/PDRange;");
+    if (_m_PDFunction__getRangeForOutput == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__getRangeForOutput, n);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__setRangeValues = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__setRangeValues(jobject self_,jobject rangeValues) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__setRangeValues, "setRangeValues", "(Lorg/apache/pdfbox/cos/COSArray;)V");
+    if (_m_PDFunction__setRangeValues == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDFunction__setRangeValues, rangeValues);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunction__getNumberOfInputParameters = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__getNumberOfInputParameters(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__getNumberOfInputParameters, "getNumberOfInputParameters", "()I");
+    if (_m_PDFunction__getNumberOfInputParameters == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunction__getNumberOfInputParameters);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunction__getDomainForInput = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__getDomainForInput(jobject self_,int32_t n) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__getDomainForInput, "getDomainForInput", "(I)Lorg/apache/pdfbox/pdmodel/common/PDRange;");
+    if (_m_PDFunction__getDomainForInput == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__getDomainForInput, n);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__setDomainValues = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__setDomainValues(jobject self_,jobject domainValues) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__setDomainValues, "setDomainValues", "(Lorg/apache/pdfbox/cos/COSArray;)V");
+    if (_m_PDFunction__setDomainValues == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDFunction__setDomainValues, domainValues);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunction__eval = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__eval(jobject self_,jobject input) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__eval, "eval", "(Lorg/apache/pdfbox/cos/COSArray;)Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunction__eval == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__eval, input);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__eval1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__eval1(jobject self_,jobject input) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__eval1, "eval", "([F)[F");
+    if (_m_PDFunction__eval1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__eval1, input);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__getRangeValues = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__getRangeValues(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__getRangeValues, "getRangeValues", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunction__getRangeValues == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__getRangeValues);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__clipToRange = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__clipToRange(jobject self_,jobject inputValues) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__clipToRange, "clipToRange", "([F)[F");
+    if (_m_PDFunction__clipToRange == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__clipToRange, inputValues);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunction__clipToRange1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__clipToRange1(jobject self_,float x,float rangeMin,float rangeMax) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__clipToRange1, "clipToRange", "(FFF)F");
+    if (_m_PDFunction__clipToRange1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDFunction__clipToRange1, x, rangeMin, rangeMax);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunction__interpolate = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__interpolate(jobject self_,float x,float xRangeMin,float xRangeMax,float yRangeMin,float yRangeMax) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__interpolate, "interpolate", "(FFFFF)F");
+    if (_m_PDFunction__interpolate == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDFunction__interpolate, x, xRangeMin, xRangeMax, yRangeMin, yRangeMax);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunction__toString1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunction__toString1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunction, "org/apache/pdfbox/pdmodel/common/function/PDFunction");
+    if (_c_PDFunction == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunction,
+      &_m_PDFunction__toString1, "toString", "()Ljava/lang/String;");
+    if (_m_PDFunction__toString1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunction__toString1);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.function.PDFunctionType0
+jclass _c_PDFunctionType0 = NULL;
+
+jmethodID _m_PDFunctionType0__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__new0(jobject function) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__new0, "<init>", "(Lorg/apache/pdfbox/cos/COSBase;)V");
+    if (_m_PDFunctionType0__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDFunctionType0, _m_PDFunctionType0__new0, function);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType0__getFunctionType = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__getFunctionType(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__getFunctionType, "getFunctionType", "()I");
+    if (_m_PDFunctionType0__getFunctionType == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunctionType0__getFunctionType);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType0__getSize = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__getSize(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__getSize, "getSize", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunctionType0__getSize == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType0__getSize);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType0__getBitsPerSample = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__getBitsPerSample(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__getBitsPerSample, "getBitsPerSample", "()I");
+    if (_m_PDFunctionType0__getBitsPerSample == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunctionType0__getBitsPerSample);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType0__getOrder = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__getOrder(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__getOrder, "getOrder", "()I");
+    if (_m_PDFunctionType0__getOrder == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunctionType0__getOrder);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType0__setBitsPerSample = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__setBitsPerSample(jobject self_,int32_t bps) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__setBitsPerSample, "setBitsPerSample", "(I)V");
+    if (_m_PDFunctionType0__setBitsPerSample == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDFunctionType0__setBitsPerSample, bps);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType0__getEncodeForParameter = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__getEncodeForParameter(jobject self_,int32_t paramNum) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__getEncodeForParameter, "getEncodeForParameter", "(I)Lorg/apache/pdfbox/pdmodel/common/PDRange;");
+    if (_m_PDFunctionType0__getEncodeForParameter == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType0__getEncodeForParameter, paramNum);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType0__setEncodeValues = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__setEncodeValues(jobject self_,jobject encodeValues) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__setEncodeValues, "setEncodeValues", "(Lorg/apache/pdfbox/cos/COSArray;)V");
+    if (_m_PDFunctionType0__setEncodeValues == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDFunctionType0__setEncodeValues, encodeValues);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType0__getDecodeForParameter = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__getDecodeForParameter(jobject self_,int32_t paramNum) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__getDecodeForParameter, "getDecodeForParameter", "(I)Lorg/apache/pdfbox/pdmodel/common/PDRange;");
+    if (_m_PDFunctionType0__getDecodeForParameter == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType0__getDecodeForParameter, paramNum);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType0__setDecodeValues = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__setDecodeValues(jobject self_,jobject decodeValues) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__setDecodeValues, "setDecodeValues", "(Lorg/apache/pdfbox/cos/COSArray;)V");
+    if (_m_PDFunctionType0__setDecodeValues == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_PDFunctionType0__setDecodeValues, decodeValues);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType0__eval1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType0__eval1(jobject self_,jobject input) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType0, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType0");
+    if (_c_PDFunctionType0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType0,
+      &_m_PDFunctionType0__eval1, "eval", "([F)[F");
+    if (_m_PDFunctionType0__eval1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType0__eval1, input);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.function.PDFunctionType2
+jclass _c_PDFunctionType2 = NULL;
+
+jmethodID _m_PDFunctionType2__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType2__new0(jobject function) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType2, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType2");
+    if (_c_PDFunctionType2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType2,
+      &_m_PDFunctionType2__new0, "<init>", "(Lorg/apache/pdfbox/cos/COSBase;)V");
+    if (_m_PDFunctionType2__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDFunctionType2, _m_PDFunctionType2__new0, function);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType2__getFunctionType = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType2__getFunctionType(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType2, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType2");
+    if (_c_PDFunctionType2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType2,
+      &_m_PDFunctionType2__getFunctionType, "getFunctionType", "()I");
+    if (_m_PDFunctionType2__getFunctionType == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunctionType2__getFunctionType);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType2__eval1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType2__eval1(jobject self_,jobject input) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType2, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType2");
+    if (_c_PDFunctionType2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType2,
+      &_m_PDFunctionType2__eval1, "eval", "([F)[F");
+    if (_m_PDFunctionType2__eval1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType2__eval1, input);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType2__getC0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType2__getC0(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType2, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType2");
+    if (_c_PDFunctionType2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType2,
+      &_m_PDFunctionType2__getC0, "getC0", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunctionType2__getC0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType2__getC0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType2__getC1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType2__getC1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType2, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType2");
+    if (_c_PDFunctionType2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType2,
+      &_m_PDFunctionType2__getC1, "getC1", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunctionType2__getC1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType2__getC1);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType2__getN = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType2__getN(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType2, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType2");
+    if (_c_PDFunctionType2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType2,
+      &_m_PDFunctionType2__getN, "getN", "()F");
+    if (_m_PDFunctionType2__getN == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_PDFunctionType2__getN);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType2__toString1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType2__toString1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType2, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType2");
+    if (_c_PDFunctionType2 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType2,
+      &_m_PDFunctionType2__toString1, "toString", "()Ljava/lang/String;");
+    if (_m_PDFunctionType2__toString1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType2__toString1);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.function.PDFunctionType3
+jclass _c_PDFunctionType3 = NULL;
+
+jmethodID _m_PDFunctionType3__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType3__new0(jobject functionStream) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType3, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType3");
+    if (_c_PDFunctionType3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType3,
+      &_m_PDFunctionType3__new0, "<init>", "(Lorg/apache/pdfbox/cos/COSBase;)V");
+    if (_m_PDFunctionType3__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDFunctionType3, _m_PDFunctionType3__new0, functionStream);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType3__getFunctionType = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType3__getFunctionType(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType3, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType3");
+    if (_c_PDFunctionType3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType3,
+      &_m_PDFunctionType3__getFunctionType, "getFunctionType", "()I");
+    if (_m_PDFunctionType3__getFunctionType == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunctionType3__getFunctionType);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType3__eval1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType3__eval1(jobject self_,jobject input) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType3, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType3");
+    if (_c_PDFunctionType3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType3,
+      &_m_PDFunctionType3__eval1, "eval", "([F)[F");
+    if (_m_PDFunctionType3__eval1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType3__eval1, input);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType3__getFunctions = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType3__getFunctions(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType3, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType3");
+    if (_c_PDFunctionType3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType3,
+      &_m_PDFunctionType3__getFunctions, "getFunctions", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunctionType3__getFunctions == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType3__getFunctions);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType3__getBounds = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType3__getBounds(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType3, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType3");
+    if (_c_PDFunctionType3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType3,
+      &_m_PDFunctionType3__getBounds, "getBounds", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunctionType3__getBounds == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType3__getBounds);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType3__getEncode = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType3__getEncode(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType3, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType3");
+    if (_c_PDFunctionType3 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType3,
+      &_m_PDFunctionType3__getEncode, "getEncode", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunctionType3__getEncode == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType3__getEncode);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.function.PDFunctionType4
+jclass _c_PDFunctionType4 = NULL;
+
+jmethodID _m_PDFunctionType4__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType4__new0(jobject functionStream) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType4, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType4");
+    if (_c_PDFunctionType4 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType4,
+      &_m_PDFunctionType4__new0, "<init>", "(Lorg/apache/pdfbox/cos/COSBase;)V");
+    if (_m_PDFunctionType4__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDFunctionType4, _m_PDFunctionType4__new0, functionStream);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionType4__getFunctionType = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType4__getFunctionType(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType4, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType4");
+    if (_c_PDFunctionType4 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType4,
+      &_m_PDFunctionType4__getFunctionType, "getFunctionType", "()I");
+    if (_m_PDFunctionType4__getFunctionType == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunctionType4__getFunctionType);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionType4__eval1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionType4__eval1(jobject self_,jobject input) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionType4, "org/apache/pdfbox/pdmodel/common/function/PDFunctionType4");
+    if (_c_PDFunctionType4 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionType4,
+      &_m_PDFunctionType4__eval1, "eval", "([F)[F");
+    if (_m_PDFunctionType4__eval1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionType4__eval1, input);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.function.PDFunctionTypeIdentity
+jclass _c_PDFunctionTypeIdentity = NULL;
+
+jmethodID _m_PDFunctionTypeIdentity__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionTypeIdentity__new0(jobject function) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionTypeIdentity, "org/apache/pdfbox/pdmodel/common/function/PDFunctionTypeIdentity");
+    if (_c_PDFunctionTypeIdentity == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionTypeIdentity,
+      &_m_PDFunctionTypeIdentity__new0, "<init>", "(Lorg/apache/pdfbox/cos/COSBase;)V");
+    if (_m_PDFunctionTypeIdentity__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_PDFunctionTypeIdentity, _m_PDFunctionTypeIdentity__new0, function);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionTypeIdentity__getFunctionType = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionTypeIdentity__getFunctionType(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionTypeIdentity, "org/apache/pdfbox/pdmodel/common/function/PDFunctionTypeIdentity");
+    if (_c_PDFunctionTypeIdentity == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionTypeIdentity,
+      &_m_PDFunctionTypeIdentity__getFunctionType, "getFunctionType", "()I");
+    if (_m_PDFunctionTypeIdentity__getFunctionType == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_PDFunctionTypeIdentity__getFunctionType);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_PDFunctionTypeIdentity__eval1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionTypeIdentity__eval1(jobject self_,jobject input) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionTypeIdentity, "org/apache/pdfbox/pdmodel/common/function/PDFunctionTypeIdentity");
+    if (_c_PDFunctionTypeIdentity == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionTypeIdentity,
+      &_m_PDFunctionTypeIdentity__eval1, "eval", "([F)[F");
+    if (_m_PDFunctionTypeIdentity__eval1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionTypeIdentity__eval1, input);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionTypeIdentity__getRangeValues = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionTypeIdentity__getRangeValues(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionTypeIdentity, "org/apache/pdfbox/pdmodel/common/function/PDFunctionTypeIdentity");
+    if (_c_PDFunctionTypeIdentity == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionTypeIdentity,
+      &_m_PDFunctionTypeIdentity__getRangeValues, "getRangeValues", "()Lorg/apache/pdfbox/cos/COSArray;");
+    if (_m_PDFunctionTypeIdentity__getRangeValues == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionTypeIdentity__getRangeValues);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_PDFunctionTypeIdentity__toString1 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult PDFunctionTypeIdentity__toString1(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_PDFunctionTypeIdentity, "org/apache/pdfbox/pdmodel/common/function/PDFunctionTypeIdentity");
+    if (_c_PDFunctionTypeIdentity == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_PDFunctionTypeIdentity,
+      &_m_PDFunctionTypeIdentity__toString1, "toString", "()Ljava/lang/String;");
+    if (_m_PDFunctionTypeIdentity__toString1 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_PDFunctionTypeIdentity__toString1);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.function.type4.ExecutionContext
+jclass _c_ExecutionContext = NULL;
+
+jmethodID _m_ExecutionContext__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult ExecutionContext__new0(jobject operatorSet) {
+    load_env();
+        load_class_global_ref(&_c_ExecutionContext, "org/apache/pdfbox/pdmodel/common/function/type4/ExecutionContext");
+    if (_c_ExecutionContext == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_ExecutionContext,
+      &_m_ExecutionContext__new0, "<init>", "(Lorg/apache/pdfbox/pdmodel/common/function/type4/Operators;)V");
+    if (_m_ExecutionContext__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_ExecutionContext, _m_ExecutionContext__new0, operatorSet);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_ExecutionContext__getStack = NULL;
+FFI_PLUGIN_EXPORT
+JniResult ExecutionContext__getStack(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_ExecutionContext, "org/apache/pdfbox/pdmodel/common/function/type4/ExecutionContext");
+    if (_c_ExecutionContext == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_ExecutionContext,
+      &_m_ExecutionContext__getStack, "getStack", "()Ljava/util/Stack;");
+    if (_m_ExecutionContext__getStack == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_ExecutionContext__getStack);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_ExecutionContext__getOperators = NULL;
+FFI_PLUGIN_EXPORT
+JniResult ExecutionContext__getOperators(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_ExecutionContext, "org/apache/pdfbox/pdmodel/common/function/type4/ExecutionContext");
+    if (_c_ExecutionContext == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_ExecutionContext,
+      &_m_ExecutionContext__getOperators, "getOperators", "()Lorg/apache/pdfbox/pdmodel/common/function/type4/Operators;");
+    if (_m_ExecutionContext__getOperators == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_ExecutionContext__getOperators);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_ExecutionContext__popNumber = NULL;
+FFI_PLUGIN_EXPORT
+JniResult ExecutionContext__popNumber(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_ExecutionContext, "org/apache/pdfbox/pdmodel/common/function/type4/ExecutionContext");
+    if (_c_ExecutionContext == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_ExecutionContext,
+      &_m_ExecutionContext__popNumber, "popNumber", "()Ljava/lang/Number;");
+    if (_m_ExecutionContext__popNumber == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_ExecutionContext__popNumber);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_ExecutionContext__popInt = NULL;
+FFI_PLUGIN_EXPORT
+JniResult ExecutionContext__popInt(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_ExecutionContext, "org/apache/pdfbox/pdmodel/common/function/type4/ExecutionContext");
+    if (_c_ExecutionContext == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_ExecutionContext,
+      &_m_ExecutionContext__popInt, "popInt", "()I");
+    if (_m_ExecutionContext__popInt == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallIntMethod(jniEnv, self_, _m_ExecutionContext__popInt);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_ExecutionContext__popReal = NULL;
+FFI_PLUGIN_EXPORT
+JniResult ExecutionContext__popReal(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_ExecutionContext, "org/apache/pdfbox/pdmodel/common/function/type4/ExecutionContext");
+    if (_c_ExecutionContext == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_ExecutionContext,
+      &_m_ExecutionContext__popReal, "popReal", "()F");
+    if (_m_ExecutionContext__popReal == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallFloatMethod(jniEnv, self_, _m_ExecutionContext__popReal);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.function.type4.InstructionSequence
+jclass _c_InstructionSequence = NULL;
+
+jmethodID _m_InstructionSequence__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequence__new0() {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequence, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence");
+    if (_c_InstructionSequence == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequence,
+      &_m_InstructionSequence__new0, "<init>", "()V");
+    if (_m_InstructionSequence__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_InstructionSequence, _m_InstructionSequence__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_InstructionSequence__addName = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequence__addName(jobject self_,jobject name) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequence, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence");
+    if (_c_InstructionSequence == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequence,
+      &_m_InstructionSequence__addName, "addName", "(Ljava/lang/String;)V");
+    if (_m_InstructionSequence__addName == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_InstructionSequence__addName, name);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_InstructionSequence__addInteger = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequence__addInteger(jobject self_,int32_t value) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequence, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence");
+    if (_c_InstructionSequence == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequence,
+      &_m_InstructionSequence__addInteger, "addInteger", "(I)V");
+    if (_m_InstructionSequence__addInteger == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_InstructionSequence__addInteger, value);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_InstructionSequence__addReal = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequence__addReal(jobject self_,float value) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequence, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence");
+    if (_c_InstructionSequence == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequence,
+      &_m_InstructionSequence__addReal, "addReal", "(F)V");
+    if (_m_InstructionSequence__addReal == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_InstructionSequence__addReal, value);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_InstructionSequence__addBoolean = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequence__addBoolean(jobject self_,uint8_t value) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequence, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence");
+    if (_c_InstructionSequence == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequence,
+      &_m_InstructionSequence__addBoolean, "addBoolean", "(Z)V");
+    if (_m_InstructionSequence__addBoolean == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_InstructionSequence__addBoolean, value);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_InstructionSequence__addProc = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequence__addProc(jobject self_,jobject child) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequence, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence");
+    if (_c_InstructionSequence == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequence,
+      &_m_InstructionSequence__addProc, "addProc", "(Lorg/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence;)V");
+    if (_m_InstructionSequence__addProc == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_InstructionSequence__addProc, child);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_InstructionSequence__execute = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequence__execute(jobject self_,jobject context) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequence, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence");
+    if (_c_InstructionSequence == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequence,
+      &_m_InstructionSequence__execute, "execute", "(Lorg/apache/pdfbox/pdmodel/common/function/type4/ExecutionContext;)V");
+    if (_m_InstructionSequence__execute == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_InstructionSequence__execute, context);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.function.type4.InstructionSequenceBuilder
+jclass _c_InstructionSequenceBuilder = NULL;
+
+jmethodID _m_InstructionSequenceBuilder__getInstructionSequence = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequenceBuilder__getInstructionSequence(jobject self_) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequenceBuilder, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequenceBuilder");
+    if (_c_InstructionSequenceBuilder == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequenceBuilder,
+      &_m_InstructionSequenceBuilder__getInstructionSequence, "getInstructionSequence", "()Lorg/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence;");
+    if (_m_InstructionSequenceBuilder__getInstructionSequence == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_InstructionSequenceBuilder__getInstructionSequence);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_InstructionSequenceBuilder__parse = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequenceBuilder__parse(jobject text) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequenceBuilder, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequenceBuilder");
+    if (_c_InstructionSequenceBuilder == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_InstructionSequenceBuilder,
+      &_m_InstructionSequenceBuilder__parse, "parse", "(Ljava/lang/CharSequence;)Lorg/apache/pdfbox/pdmodel/common/function/type4/InstructionSequence;");
+    if (_m_InstructionSequenceBuilder__parse == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallStaticObjectMethod(jniEnv, _c_InstructionSequenceBuilder, _m_InstructionSequenceBuilder__parse, text);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_InstructionSequenceBuilder__token = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequenceBuilder__token(jobject self_,jobject text) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequenceBuilder, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequenceBuilder");
+    if (_c_InstructionSequenceBuilder == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_InstructionSequenceBuilder,
+      &_m_InstructionSequenceBuilder__token, "token", "(Ljava/lang/CharSequence;)V");
+    if (_m_InstructionSequenceBuilder__token == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_InstructionSequenceBuilder__token, text);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_InstructionSequenceBuilder__parseInt = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequenceBuilder__parseInt(jobject token) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequenceBuilder, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequenceBuilder");
+    if (_c_InstructionSequenceBuilder == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_InstructionSequenceBuilder,
+      &_m_InstructionSequenceBuilder__parseInt, "parseInt", "(Ljava/lang/String;)I");
+    if (_m_InstructionSequenceBuilder__parseInt == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    int32_t _result = (*jniEnv)->CallStaticIntMethod(jniEnv, _c_InstructionSequenceBuilder, _m_InstructionSequenceBuilder__parseInt, token);
+    return (JniResult){.value = {.i = _result}, .exception = check_exception()};
+}
+
+jmethodID _m_InstructionSequenceBuilder__parseReal = NULL;
+FFI_PLUGIN_EXPORT
+JniResult InstructionSequenceBuilder__parseReal(jobject token) {
+    load_env();
+        load_class_global_ref(&_c_InstructionSequenceBuilder, "org/apache/pdfbox/pdmodel/common/function/type4/InstructionSequenceBuilder");
+    if (_c_InstructionSequenceBuilder == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_InstructionSequenceBuilder,
+      &_m_InstructionSequenceBuilder__parseReal, "parseReal", "(Ljava/lang/String;)F");
+    if (_m_InstructionSequenceBuilder__parseReal == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    float _result = (*jniEnv)->CallStaticFloatMethod(jniEnv, _c_InstructionSequenceBuilder, _m_InstructionSequenceBuilder__parseReal, token);
+    return (JniResult){.value = {.f = _result}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.function.type4.Operator
+jclass _c_Operator = NULL;
+
+jmethodID _m_Operator__execute = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Operator__execute(jobject self_,jobject context) {
+    load_env();
+        load_class_global_ref(&_c_Operator, "org/apache/pdfbox/pdmodel/common/function/type4/Operator");
+    if (_c_Operator == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Operator,
+      &_m_Operator__execute, "execute", "(Lorg/apache/pdfbox/pdmodel/common/function/type4/ExecutionContext;)V");
+    if (_m_Operator__execute == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_Operator__execute, context);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.function.type4.Operators
+jclass _c_Operators = NULL;
+
+jmethodID _m_Operators__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Operators__new0() {
+    load_env();
+        load_class_global_ref(&_c_Operators, "org/apache/pdfbox/pdmodel/common/function/type4/Operators");
+    if (_c_Operators == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Operators,
+      &_m_Operators__new0, "<init>", "()V");
+    if (_m_Operators__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_Operators, _m_Operators__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_Operators__getOperator = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Operators__getOperator(jobject self_,jobject operatorName) {
+    load_env();
+        load_class_global_ref(&_c_Operators, "org/apache/pdfbox/pdmodel/common/function/type4/Operators");
+    if (_c_Operators == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Operators,
+      &_m_Operators__getOperator, "getOperator", "(Ljava/lang/String;)Lorg/apache/pdfbox/pdmodel/common/function/type4/Operator;");
+    if (_m_Operators__getOperator == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->CallObjectMethod(jniEnv, self_, _m_Operators__getOperator, operatorName);
+    return to_global_ref_result(_result);
+}
+
+// org.apache.pdfbox.pdmodel.common.function.type4.Parser
+jclass _c_Parser = NULL;
+
+jmethodID _m_Parser__parse = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser__parse(jobject input,jobject handler) {
+    load_env();
+        load_class_global_ref(&_c_Parser, "org/apache/pdfbox/pdmodel/common/function/type4/Parser");
+    if (_c_Parser == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_static_method(_c_Parser,
+      &_m_Parser__parse, "parse", "(Ljava/lang/CharSequence;Lorg/apache/pdfbox/pdmodel/common/function/type4/Parser$SyntaxHandler;)V");
+    if (_m_Parser__parse == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallStaticVoidMethod(jniEnv, _c_Parser, _m_Parser__parse, input, handler);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.function.type4.Parser$AbstractSyntaxHandler
+jclass _c_Parser_AbstractSyntaxHandler = NULL;
+
+jmethodID _m_Parser_AbstractSyntaxHandler__new0 = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser_AbstractSyntaxHandler__new0() {
+    load_env();
+        load_class_global_ref(&_c_Parser_AbstractSyntaxHandler, "org/apache/pdfbox/pdmodel/common/function/type4/Parser$AbstractSyntaxHandler");
+    if (_c_Parser_AbstractSyntaxHandler == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Parser_AbstractSyntaxHandler,
+      &_m_Parser_AbstractSyntaxHandler__new0, "<init>", "()V");
+    if (_m_Parser_AbstractSyntaxHandler__new0 == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    jobject _result = (*jniEnv)->NewObject(jniEnv, _c_Parser_AbstractSyntaxHandler, _m_Parser_AbstractSyntaxHandler__new0);
+    return to_global_ref_result(_result);
+}
+
+jmethodID _m_Parser_AbstractSyntaxHandler__comment = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser_AbstractSyntaxHandler__comment(jobject self_,jobject text) {
+    load_env();
+        load_class_global_ref(&_c_Parser_AbstractSyntaxHandler, "org/apache/pdfbox/pdmodel/common/function/type4/Parser$AbstractSyntaxHandler");
+    if (_c_Parser_AbstractSyntaxHandler == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Parser_AbstractSyntaxHandler,
+      &_m_Parser_AbstractSyntaxHandler__comment, "comment", "(Ljava/lang/CharSequence;)V");
+    if (_m_Parser_AbstractSyntaxHandler__comment == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_Parser_AbstractSyntaxHandler__comment, text);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_Parser_AbstractSyntaxHandler__newLine = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser_AbstractSyntaxHandler__newLine(jobject self_,jobject text) {
+    load_env();
+        load_class_global_ref(&_c_Parser_AbstractSyntaxHandler, "org/apache/pdfbox/pdmodel/common/function/type4/Parser$AbstractSyntaxHandler");
+    if (_c_Parser_AbstractSyntaxHandler == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Parser_AbstractSyntaxHandler,
+      &_m_Parser_AbstractSyntaxHandler__newLine, "newLine", "(Ljava/lang/CharSequence;)V");
+    if (_m_Parser_AbstractSyntaxHandler__newLine == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_Parser_AbstractSyntaxHandler__newLine, text);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_Parser_AbstractSyntaxHandler__whitespace = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser_AbstractSyntaxHandler__whitespace(jobject self_,jobject text) {
+    load_env();
+        load_class_global_ref(&_c_Parser_AbstractSyntaxHandler, "org/apache/pdfbox/pdmodel/common/function/type4/Parser$AbstractSyntaxHandler");
+    if (_c_Parser_AbstractSyntaxHandler == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Parser_AbstractSyntaxHandler,
+      &_m_Parser_AbstractSyntaxHandler__whitespace, "whitespace", "(Ljava/lang/CharSequence;)V");
+    if (_m_Parser_AbstractSyntaxHandler__whitespace == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_Parser_AbstractSyntaxHandler__whitespace, text);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+// org.apache.pdfbox.pdmodel.common.function.type4.Parser$SyntaxHandler
+jclass _c_Parser_SyntaxHandler = NULL;
+
+jmethodID _m_Parser_SyntaxHandler__newLine = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser_SyntaxHandler__newLine(jobject self_,jobject text) {
+    load_env();
+        load_class_global_ref(&_c_Parser_SyntaxHandler, "org/apache/pdfbox/pdmodel/common/function/type4/Parser$SyntaxHandler");
+    if (_c_Parser_SyntaxHandler == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Parser_SyntaxHandler,
+      &_m_Parser_SyntaxHandler__newLine, "newLine", "(Ljava/lang/CharSequence;)V");
+    if (_m_Parser_SyntaxHandler__newLine == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_Parser_SyntaxHandler__newLine, text);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_Parser_SyntaxHandler__whitespace = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser_SyntaxHandler__whitespace(jobject self_,jobject text) {
+    load_env();
+        load_class_global_ref(&_c_Parser_SyntaxHandler, "org/apache/pdfbox/pdmodel/common/function/type4/Parser$SyntaxHandler");
+    if (_c_Parser_SyntaxHandler == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Parser_SyntaxHandler,
+      &_m_Parser_SyntaxHandler__whitespace, "whitespace", "(Ljava/lang/CharSequence;)V");
+    if (_m_Parser_SyntaxHandler__whitespace == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_Parser_SyntaxHandler__whitespace, text);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_Parser_SyntaxHandler__token = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser_SyntaxHandler__token(jobject self_,jobject text) {
+    load_env();
+        load_class_global_ref(&_c_Parser_SyntaxHandler, "org/apache/pdfbox/pdmodel/common/function/type4/Parser$SyntaxHandler");
+    if (_c_Parser_SyntaxHandler == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Parser_SyntaxHandler,
+      &_m_Parser_SyntaxHandler__token, "token", "(Ljava/lang/CharSequence;)V");
+    if (_m_Parser_SyntaxHandler__token == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_Parser_SyntaxHandler__token, text);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
+jmethodID _m_Parser_SyntaxHandler__comment = NULL;
+FFI_PLUGIN_EXPORT
+JniResult Parser_SyntaxHandler__comment(jobject self_,jobject text) {
+    load_env();
+        load_class_global_ref(&_c_Parser_SyntaxHandler, "org/apache/pdfbox/pdmodel/common/function/type4/Parser$SyntaxHandler");
+    if (_c_Parser_SyntaxHandler == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    load_method(_c_Parser_SyntaxHandler,
+      &_m_Parser_SyntaxHandler__comment, "comment", "(Ljava/lang/CharSequence;)V");
+    if (_m_Parser_SyntaxHandler__comment == NULL) return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+    (*jniEnv)->CallVoidMethod(jniEnv, self_, _m_Parser_SyntaxHandler__comment, text);
+    return (JniResult){.value = {.j = 0}, .exception = check_exception()};
+}
+
