@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:swiss_knife_application/src/applications/json_formatter/json_formatter_application.dart';
-import 'package:swiss_knife_application/src/applications/pdf_compressor/pdf_compressor_application.dart';
+import 'package:swiss_knife_application/src/applications/image_to_pdf/image_to_pdf_application.dart';
 import 'package:swiss_knife_application/src/applications_list/base_application.dart';
 import 'package:swiss_knife_application/src/settings/settings_view.dart';
 
 class AllApplicationsListView extends StatelessWidget {
   const AllApplicationsListView({
     super.key,
-    this.applications = const [ JsonFormatterApplication() , PdfCompressorApplication() ],
+    this.applications = const [ JsonFormatterApplication() , ImageToPdfApplication() ],
   });
 
   static const routeName = "/";

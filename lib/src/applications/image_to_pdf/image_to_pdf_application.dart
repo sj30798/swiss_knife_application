@@ -1,8 +1,8 @@
 import 'package:swiss_knife_application/src/applications_list/base_application.dart';
 
-class PdfCompressorApplication extends BaseApplication
+class ImageToPdfApplication extends BaseApplication
 {
-  const PdfCompressorApplication();
+  const ImageToPdfApplication();
 
   static const int id = 1;
   static const String title = "Image to PDF";

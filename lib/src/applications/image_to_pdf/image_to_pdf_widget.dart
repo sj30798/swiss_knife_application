@@ -5,14 +5,14 @@ import 'package:file_selector/file_selector.dart';
 import 'package:jni/jni.dart';
 import 'package:pdfbox_plugin/pdfbox_plugin.dart';
 
-class PdfCompressorWidget extends StatefulWidget {
-  const PdfCompressorWidget({super.key});
+class ImageToPdfWidget extends StatefulWidget {
+  const ImageToPdfWidget({super.key});
 
   @override
-  PDFCompresserWidgetState createState() => PDFCompresserWidgetState();
+  ImageToPdfWidgetState createState() => ImageToPdfWidgetState();
 }
 
-class PDFCompresserWidgetState extends State<PdfCompressorWidget> {
+class ImageToPdfWidgetState extends State<ImageToPdfWidget> {
   late List<XFile> imageFilePaths;
   late FileSaveLocation? pdfFilePath;
   late String? pageSize;

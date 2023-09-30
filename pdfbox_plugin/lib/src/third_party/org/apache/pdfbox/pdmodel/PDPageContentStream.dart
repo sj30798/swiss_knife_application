@@ -1748,8 +1748,8 @@ class PDPageContentStream extends jni.JObject {
 
   /// from: public void addBezier312(float x1, float y1, float x2, float y2, float x3, float y3)
   ///
-  /// Append a cubic Bézier curve to the current path. The curve extends from the current
-  /// point to the point (x3 , y3 ), using (x1 , y1 ) and (x2 , y2 ) as the Bézier control points
+  /// Append a cubic BÃ©zier curve to the current path. The curve extends from the current
+  /// point to the point (x3 , y3 ), using (x1 , y1 ) and (x2 , y2 ) as the BÃ©zier control points
   ///@param x1 x coordinate of the point 1
   ///@param y1 y coordinate of the point 1
   ///@param x2 x coordinate of the point 2
@@ -1785,8 +1785,8 @@ class PDPageContentStream extends jni.JObject {
 
   /// from: public void curveTo(float x1, float y1, float x2, float y2, float x3, float y3)
   ///
-  /// Append a cubic Bézier curve to the current path. The curve extends from the current point to
-  /// the point (x3, y3), using (x1, y1) and (x2, y2) as the Bézier control points.
+  /// Append a cubic BÃ©zier curve to the current path. The curve extends from the current point to
+  /// the point (x3, y3), using (x1, y1) and (x2, y2) as the BÃ©zier control points.
   ///@param x1 x coordinate of the point 1
   ///@param y1 y coordinate of the point 1
   ///@param x2 x coordinate of the point 2
@@ -1820,8 +1820,8 @@ class PDPageContentStream extends jni.JObject {
 
   /// from: public void addBezier32(float x2, float y2, float x3, float y3)
   ///
-  /// Append a cubic Bézier curve to the current path. The curve extends from the current
-  /// point to the point (x3 , y3 ), using the current point and (x2 , y2 ) as the Bézier control points/
+  /// Append a cubic BÃ©zier curve to the current path. The curve extends from the current
+  /// point to the point (x3 , y3 ), using the current point and (x2 , y2 ) as the BÃ©zier control points/
   ///@param x2 x coordinate of the point 2
   ///@param y2 y coordinate of the point 2
   ///@param x3 x coordinate of the point 3
@@ -1851,8 +1851,8 @@ class PDPageContentStream extends jni.JObject {
 
   /// from: public void curveTo2(float x2, float y2, float x3, float y3)
   ///
-  /// Append a cubic Bézier curve to the current path. The curve extends from the current point to
-  /// the point (x3, y3), using the current point and (x2, y2) as the Bézier control points.
+  /// Append a cubic BÃ©zier curve to the current path. The curve extends from the current point to
+  /// the point (x3, y3), using the current point and (x2, y2) as the BÃ©zier control points.
   ///@param x2 x coordinate of the point 2
   ///@param y2 y coordinate of the point 2
   ///@param x3 x coordinate of the point 3
@@ -1882,8 +1882,8 @@ class PDPageContentStream extends jni.JObject {
 
   /// from: public void addBezier31(float x1, float y1, float x3, float y3)
   ///
-  /// Append a cubic Bézier curve to the current path. The curve extends from the current
-  /// point to the point (x3 , y3 ), using (x1 , y1 ) and (x3 , y3 ) as the Bézier control points/
+  /// Append a cubic BÃ©zier curve to the current path. The curve extends from the current
+  /// point to the point (x3 , y3 ), using (x1 , y1 ) and (x3 , y3 ) as the BÃ©zier control points/
   ///@param x1 x coordinate of the point 1
   ///@param y1 y coordinate of the point 1
   ///@param x3 x coordinate of the point 3
@@ -1913,8 +1913,8 @@ class PDPageContentStream extends jni.JObject {
 
   /// from: public void curveTo1(float x1, float y1, float x3, float y3)
   ///
-  /// Append a cubic Bézier curve to the current path. The curve extends from the current point to
-  /// the point (x3, y3), using (x1, y1) and (x3, y3) as the Bézier control points.
+  /// Append a cubic BÃ©zier curve to the current path. The curve extends from the current point to
+  /// the point (x3, y3), using (x1, y1) and (x3, y3) as the BÃ©zier control points.
   ///@param x1 x coordinate of the point 1
   ///@param y1 y coordinate of the point 1
   ///@param x3 x coordinate of the point 3

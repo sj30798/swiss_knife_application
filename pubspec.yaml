@@ -27,6 +27,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
   jnigen: ^0.7.0
+  msix: ^3.16.4
 
 flutter:
   uses-material-design: true
@@ -37,3 +38,18 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+
+msix_config:
+  display_name: "Swiss knife of apps"
+  publisher_display_name: Divine bug
+  identity_name: dev.bugdivine.swissknife
+  msix_version: 1.0.0.0
+  languages: en-us, de-de
+  capabilities: ""
+  app_installer: #<-- app installer configuration
+    publish_folder_path: C:\Users\sj307\Desktop\GitHub\
+    hours_between_update_checks: 0
+    automatic_background_task: true
+    update_blocks_activation: true
+    show_prompt: true
+    force_update_from_any_version: false

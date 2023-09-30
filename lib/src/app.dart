@@ -3,8 +3,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:swiss_knife_application/src/applications/json_formatter/json_formatter_application.dart';
 import 'package:swiss_knife_application/src/applications/json_formatter/json_formatter_application_view.dart';
-import 'package:swiss_knife_application/src/applications/pdf_compressor/pdf_compressor_application.dart';
-import 'package:swiss_knife_application/src/applications/pdf_compressor/pdf_compressor_application_view.dart';
+import 'package:swiss_knife_application/src/applications/image_to_pdf/image_to_pdf_application.dart';
+import 'package:swiss_knife_application/src/applications/image_to_pdf/image_to_pdf_application_view.dart';
 import 'package:swiss_knife_application/src/applications_list/all_application_list_view.dart';
 
 import 'settings/settings_controller.dart';
@@ -72,8 +72,8 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case PdfCompressorApplication.routeName:
-                    return const PdfCompressorApplicationView();
+                  case ImageToPdfApplication.routeName:
+                    return const ImageToPdfApplicationView();
                   case JsonFormatterApplication.routeName:
                     return const JsonFormatterApplicationView();
                   case AllApplicationsListView.routeName:
